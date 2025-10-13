@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables from Design Theme */
+:root {
+  /* Colors */
+  --color-primary: #000000;
+  --color-accent-start: #8009FF;
+  --color-accent-end: #F200FF;
+  --color-highlight: #9b8dff;
+  --color-text: #FFFFFF;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-hover: rgba(255, 255, 255, 0.1);
+  --color-cta: #7938CC;
+  
+  /* Gradients */
+  --gradient-accent: linear-gradient(90deg, #8009FF, #F200FF);
+  --gradient-accent-135: linear-gradient(135deg, #8009FF, #F200FF);
+  
+  /* Typography - Fallbacks for when CSS variables aren't loaded */
+  --font-heading-fallback: 'Rethink Sans', sans-serif;
+  --font-body-fallback: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --section-padding-large: 4rem 0;
+  --section-padding-medium: 3rem 0;
+  --section-padding-small: 2rem 0;
+  --wrapper-max-width: 90rem;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: var(--font-body), var(--font-body-fallback);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), var(--font-heading-fallback);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Utility Classes */
+.wrapper {
+  max-width: var(--wrapper-max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.padding-section-large {
+  padding: 4rem 2rem;
+}
+
+.padding-section-medium {
+  padding: 3rem 2rem;
+}
+
+.padding-section-small {
+  padding: 2rem;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animated-gradient-text {
+  background: linear-gradient(90deg, #8009FF, #F200FF, #8009FF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Glass Effect */
+.background-glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(0.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.background-glass:hover {
+  background: var(--color-glass-hover);
+  box-shadow: 0 0 30px rgba(128, 9, 255, 0.4);
+}
+
+/* Button */
+.button {
+  background: var(--gradient-accent);
+  color: var(--color-text);
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(128, 9, 255, 0.6);
+}
+
+/* Gradient Border */
+.gradient-border {
+  position: relative;
+  padding: 2px;
+  background: var(--gradient-accent);
+  border-radius: 1rem;
+}
+
+.gradient-border-inner {
+  background: var(--color-primary);
+  border-radius: calc(1rem - 2px);
+  padding: 1.5rem;
+}
+
+/* Grid Layouts */
+.grid3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grid3x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid3x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flexbox Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Service Card */
+.service-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Floating Drops Background */
+.drops-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  background: radial-gradient(circle, var(--color-highlight) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.drop1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.drop2 {
+  width: 300px;
+  height: 300px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 5s;
+}
+
+.drop3 {
+  width: 350px;
+  height: 350px;
+  bottom: 10%;
+  left: 50%;
+  animation-delay: 10s;
+}
+
+.drop4 {
+  width: 250px;
+  height: 250px;
+  top: 40%;
+  right: 30%;
+  animation-delay: 15s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+  
+  .padding-section-large {
+    padding: 3rem 1.5rem;
+  }
+  
+  .padding-section-medium {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
