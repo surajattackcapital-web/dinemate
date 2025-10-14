@@ -55,9 +55,9 @@ export default function Careers() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">Join Our Team</h1>
+          <h1 className="animated-gradient-text mb-6">Join Our AI Voice Agent for Restaurants Team</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Help us build AI that transforms how millions of people experience hospitality
+            Help us build our ai voice agent for restaurants that transforms how millions of people experience hospitality
           </p>
         </section>
 
@@ -69,7 +69,7 @@ export default function Careers() {
               <span className="text-4xl">🚀</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Cutting-Edge AI</h3>
-                <p className="text-gray-300">Work with the latest in NLP, voice AI, and machine learning</p>
+                <p className="text-gray-300">Work with the latest in NLP, our ai voice agent for restaurants, and machine learning</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -120,7 +120,7 @@ export default function Careers() {
               </div>
               <div className="background-glass p-6 rounded-lg flex-grow">
                 <h3 className="font-bold text-xl mb-2">2022 - Founded</h3>
-                <p className="text-gray-300">Started with a vision to revolutionize hospitality with AI</p>
+                <p className="text-gray-300">Started with a vision to revolutionize hospitality with our ai voice agent for restaurants</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">

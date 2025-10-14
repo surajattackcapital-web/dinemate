@@ -7,8 +7,8 @@ export default function FAQs() {
 
   const faqs = [
     {
-      question: "How does DineMate.ai integrate with existing restaurant systems?",
-      answer: "DineMate.ai seamlessly integrates with most major POS systems, reservation platforms, and property management systems. Our team handles the technical setup, typically completing integration within 24-48 hours with minimal disruption to operations."
+      question: "How does the ai voice agent for restaurants integrate with existing restaurant systems?",
+      answer: "Our ai voice agent for restaurants seamlessly integrates with most major POS systems, reservation platforms, and property management systems. Our team handles the technical setup, typically completing integration within 24-48 hours with minimal disruption to operations."
     },
     {
       question: "What happens if the AI makes a mistake?",
@@ -23,8 +23,8 @@ export default function FAQs() {
       answer: "Absolutely! Our AI is trained to understand complex dietary requirements (allergies, vegan, gluten-free, etc.) and modification requests. It can intelligently suggest alternatives and flag potential allergen concerns."
     },
     {
-      question: "What languages does the AI support?",
-      answer: "DineMate.ai currently supports 40+ languages including English, Spanish, French, Mandarin, Japanese, and more. The AI automatically detects the guest's language and responds accordingly."
+      question: "What languages does the ai voice agent for restaurants support?",
+      answer: "Our ai voice agent for restaurants currently supports 40+ languages including English, Spanish, French, Mandarin, Japanese, and more. The AI automatically detects the guest's language and responds accordingly."
     },
     {
       question: "How much does DineMate.ai cost?",
@@ -53,9 +53,9 @@ export default function FAQs() {
       <div className="max-w-4xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">Frequently Asked Questions</h1>
+          <h1 className="animated-gradient-text mb-6">Frequently Asked Questions - AI Voice Agent for Restaurants</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Everything you need to know about DineMate.ai
+            Everything you need to know about our ai voice agent for restaurants
           </p>
         </section>
 

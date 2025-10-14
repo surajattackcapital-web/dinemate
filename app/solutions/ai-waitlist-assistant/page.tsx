@@ -16,9 +16,9 @@ export default function AIWaitlistAssistant() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">AI Waitlist Assistant</h1>
+          <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Waitlist Assistant</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Reduce no-shows, manage guests automatically, and optimize your restaurant flow with intelligent waitlist management
+            Our ai voice agent for restaurants reduces no-shows, manages guests automatically, and optimizes your restaurant flow with intelligent waitlist management
           </p>
         </section>
 
@@ -27,7 +27,7 @@ export default function AIWaitlistAssistant() {
           <div>
             <h2 className="gradient-text text-3xl mb-6">Smart Guest Management</h2>
             <p className="text-gray-300 mb-4">
-              Our AI Waitlist Assistant revolutionizes how you manage guest flow. Automatically notify guests via SMS when their table is ready, track wait times in real-time, and reduce no-shows by up to 40%.
+              Our ai voice agent for restaurants revolutionizes how you manage guest flow. Automatically notify guests via SMS when their table is ready, track wait times in real-time, and reduce no-shows by up to 40%.
             </p>
             <p className="text-gray-300 mb-6">
               Integrate seamlessly with your existing POS and reservation systems for a unified guest experience.
@@ -74,7 +74,7 @@ export default function AIWaitlistAssistant() {
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-2xl mb-4">Reduce No-Shows by 40%</h3>
               <p className="text-gray-300 mb-4">
-                Smart automated reminders and confirmation requests ensure guests show up for their reserved time. Our AI waitlist management system sends timely SMS and email notifications, dramatically reducing no-show rates and improving table turnover.
+                Smart automated reminders and confirmation requests ensure guests show up for their reserved time. Our ai voice agent for restaurants and AI waitlist management system sends timely SMS and email notifications, dramatically reducing no-show rates and improving table turnover.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Automated SMS reminders before table time</li>

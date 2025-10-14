@@ -31,16 +31,16 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">Get in Touch</h1>
+          <h1 className="animated-gradient-text mb-6">Get in Touch - AI Voice Agent for Restaurants</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your hospitality operations? Let's talk about how DineMate.ai can help.
+            Ready to transform your hospitality operations with our ai voice agent for restaurants? Let's talk about how DineMate.ai can help.
           </p>
         </section>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="background-glass p-8 rounded-lg">
-            <h2 className="gradient-text text-2xl mb-6">Send Us a Message</h2>
+            <h2 className="gradient-text text-2xl mb-6">Send Us a Message About Our AI Voice Agent for Restaurants</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-semibold">
@@ -201,7 +201,7 @@ export default function Contact() {
             <div className="background-glass p-8 rounded-lg">
               <h3 className="gradient-text text-xl mb-4">Quick Response Time</h3>
               <p className="text-gray-300 mb-4">
-                We typically respond to all inquiries within 24 hours during business days.
+                We typically respond to all inquiries about our ai voice agent for restaurants within 24 hours during business days.
               </p>
               <p className="text-gray-300">
                 For urgent matters, please call us directly at <a href="tel:+15551234567" className="text-purple-400 hover:underline">+1 (555) 123-4567</a>

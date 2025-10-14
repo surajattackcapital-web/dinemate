@@ -16,9 +16,9 @@ export default function AIReservationAssistant() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">AI Reservation Assistant</h1>
+          <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Reservation Assistant</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Handle peak-hour reservations 24/7 with intelligent booking management and automated confirmations
+            Handle peak-hour reservations 24/7 with our ai voice agent for restaurants - intelligent booking management and automated confirmations
           </p>
         </section>
 
@@ -28,7 +28,7 @@ export default function AIReservationAssistant() {
             <div>
               <h2 className="gradient-text text-3xl mb-6">24/7 Booking Intelligence</h2>
               <p className="text-gray-300 mb-4">
-                Never miss a reservation again. Our AI handles bookings around the clock via phone, web, and messaging apps. Automatically confirms, reminds, and even handles cancellations with grace.
+                Never miss a reservation again. Our ai voice agent for restaurants handles bookings around the clock via phone, web, and messaging apps. Automatically confirms, reminds, and even handles cancellations with grace.
               </p>
               <p className="text-gray-300 mb-6">
                 Smart table optimization ensures maximum capacity utilization while maintaining guest experience standards.
@@ -107,7 +107,7 @@ export default function AIReservationAssistant() {
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-2xl mb-4">Multi-Channel Booking</h3>
               <p className="text-gray-300 mb-4">
-                Accept reservations from anywhere - phone calls, website widgets, Google, OpenTable, and social media. All bookings sync in real-time to prevent double-bookings and maintain accurate availability.
+                Accept reservations from anywhere using our ai voice agent for restaurants - phone calls, website widgets, Google, OpenTable, and social media. All bookings sync in real-time to prevent double-bookings and maintain accurate availability.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Voice reservation via phone AI</li>

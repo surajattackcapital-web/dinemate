@@ -90,10 +90,10 @@ export default function Home() {
       <section className="padding-section-large">
         <div className="wrapper text-center">
           <h1 className="animated-gradient-text mb-6">
-            AI-Powered Hospitality Solutions for Restaurants
+            AI Voice Agent for Restaurants - Transform Your Hospitality Operations
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your restaurant operations with intelligent AI assistants for waitlists, ordering, reservations, and customer feedback
+            Transform your restaurant operations with our advanced ai voice agent for restaurants - intelligent AI assistants for waitlists, ordering, reservations, and customer feedback available 24/7
           </p>
           <Link href="/contact" className="button text-lg mb-12 inline-block">
             Book a Demo
@@ -186,11 +186,11 @@ export default function Home() {
             {/* New Way Column */}
             <div className="background-glass p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">✅ New Way</h3>
-              <p className="text-gray-300 mb-6">AI-powered automation that works 24/7</p>
+              <p className="text-gray-300 mb-6">AI voice agent for restaurants that works 24/7</p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">•</span>
-                  <span className="text-gray-300">AI handles reservations, waitlists, and ordering automatically</span>
+                  <span className="text-gray-300">Our ai voice agent for restaurants handles reservations, waitlists, and ordering automatically</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">•</span>
@@ -224,7 +224,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4">Boost Efficiency</h3>
-              <p className="text-gray-300">Automate repetitive tasks and free up your staff for what matters most - delivering exceptional guest experiences</p>
+              <p className="text-gray-300">Our ai voice agent for restaurants automates repetitive tasks and frees up your staff for what matters most - delivering exceptional guest experiences</p>
             </div>
 
             {/* Benefit 2 */}
@@ -270,7 +270,7 @@ export default function Home() {
                 <span className="text-4xl font-bold gradient-text">1</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Connect Your Systems</h3>
-              <p className="text-gray-300">Integrate DineMate.ai with your existing POS, reservation, and communication systems in minutes</p>
+              <p className="text-gray-300">Integrate our ai voice agent for restaurants with your existing POS, reservation, and communication systems in minutes</p>
             </div>
 
             {/* Step 2 */}

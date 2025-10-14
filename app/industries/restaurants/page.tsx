@@ -17,9 +17,9 @@ export default function Restaurants() {
         {/* Hero */}
         <section className="mb-16">
           <div className="text-center">
-            <h1 className="animated-gradient-text mb-6">AI Solutions for Restaurants</h1>
+            <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Complete Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive AI-powered solutions designed specifically for full-service dining establishments
+              Comprehensive ai voice agent for restaurants powered solutions designed specifically for full-service dining establishments
             </p>
             <Link href="/contact" className="button text-lg inline-block mb-12">
               Get Started Today
@@ -39,7 +39,7 @@ export default function Restaurants() {
         <section className="mb-16 background-glass p-8 rounded-lg">
           <h2 className="gradient-text text-3xl mb-6">Transform Your Restaurant Operations</h2>
           <p className="text-gray-300 mb-4">
-            Running a successful restaurant requires juggling reservations, managing waitlists, coordinating orders, and ensuring every guest leaves satisfied. DineMate.ai brings the power of artificial intelligence to streamline every aspect of your operation.
+            Running a successful restaurant requires juggling reservations, managing waitlists, coordinating orders, and ensuring every guest leaves satisfied. Our ai voice agent for restaurants brings the power of artificial intelligence to streamline every aspect of your operation.
           </p>
           <p className="text-gray-300">
             From the moment a guest calls to make a reservation until they provide feedback after their meal, our AI assistants work alongside your team to deliver exceptional experiences while reducing operational costs.
@@ -159,7 +159,7 @@ export default function Restaurants() {
           <div className="space-y-4">
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Staff Shortages & High Turnover</h3>
-              <p className="text-gray-300">The restaurant industry faces chronic staffing challenges. DineMate AI fills the gap by automating host duties, order taking, and customer communication, ensuring consistent operations even with minimal staff.</p>
+              <p className="text-gray-300">The restaurant industry faces chronic staffing challenges. Our ai voice agent for restaurants fills the gap by automating host duties, order taking, and customer communication, ensuring consistent operations even with minimal staff.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Rising Operating Costs</h3>

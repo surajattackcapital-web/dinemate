@@ -16,9 +16,9 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">About DineMate.ai</h1>
+          <h1 className="animated-gradient-text mb-6">About DineMate.ai - Leading AI Voice Agent for Restaurants</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We're on a mission to transform hospitality with intelligent AI that makes every guest interaction exceptional
+            We're on a mission to transform hospitality with our intelligent ai voice agent for restaurants that makes every guest interaction exceptional
           </p>
         </section>
 
@@ -26,7 +26,7 @@ export default function About() {
         <section className="mb-16 background-glass p-12 rounded-2xl">
           <h2 className="gradient-text text-3xl mb-6 text-center">Our Mission</h2>
           <p className="text-gray-300 text-lg text-center max-w-4xl mx-auto mb-8">
-            To empower restaurants, hotels, cafes, and bars with AI technology that enhances guest experiences, streamlines operations, and drives profitability — without replacing the human touch that makes hospitality special.
+            To empower restaurants, hotels, cafes, and bars with our ai voice agent for restaurants and AI technology that enhances guest experiences, streamlines operations, and drives profitability — without replacing the human touch that makes hospitality special.
           </p>
         </section>
 
@@ -56,7 +56,7 @@ export default function About() {
         <section className="mb-16 background-glass p-12 rounded-2xl text-center">
           <div className="text-6xl mb-6">💬</div>
           <blockquote className="text-2xl text-gray-300 italic mb-6 max-w-3xl mx-auto">
-            "Technology should amplify human hospitality, not replace it. That's why we built DineMate.ai — to handle the repetitive tasks so staff can focus on creating memorable experiences."
+            "Technology should amplify human hospitality, not replace it. That's why we built our ai voice agent for restaurants — to handle the repetitive tasks so staff can focus on creating memorable experiences."
           </blockquote>
           <p className="gradient-text font-bold text-xl">— Founder, DineMate.ai</p>
         </section>
@@ -71,7 +71,7 @@ export default function About() {
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-3">🔬 Innovation-Driven</h3>
-              <p className="text-gray-300">We embrace cutting-edge AI while maintaining practical, proven solutions.</p>
+              <p className="text-gray-300">We embrace cutting-edge AI and our ai voice agent for restaurants while maintaining practical, proven solutions.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-3">🤝 Partnership Mindset</h3>

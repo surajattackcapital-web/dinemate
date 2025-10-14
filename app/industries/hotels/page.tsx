@@ -17,9 +17,9 @@ export default function Hotels() {
         {/* Hero */}
         <section className="mb-16">
           <div className="text-center">
-            <h1 className="animated-gradient-text mb-6">AI Solutions for Hotels</h1>
+            <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Hotel Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Room service automation and concierge support for modern hospitality
+              Room service automation and concierge support powered by our ai voice agent for restaurants
             </p>
             <Link href="/contact" className="button text-lg inline-block mb-12">
               Get Started Today
@@ -40,7 +40,7 @@ export default function Hotels() {
           <div className="background-glass p-8 rounded-lg mb-8">
             <h2 className="gradient-text text-3xl mb-6">Elevate Hotel Dining</h2>
             <p className="text-gray-300">
-              Provide 24/7 room service ordering, restaurant reservations, and dining recommendations with AI-powered assistance that never sleeps.
+              Provide 24/7 room service ordering, restaurant reservations, and dining recommendations with our ai voice agent for restaurants - AI-powered assistance that never sleeps.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export default function Hotels() {
             <div>
               <h3 className="font-bold text-2xl mb-4">24/7 Room Service Excellence</h3>
               <p className="text-gray-300 mb-4">
-                Never miss a room service order again. AI takes orders 24/7 in multiple languages, handles special dietary requests, and coordinates with your kitchen staff for timely delivery to guest rooms.
+                Never miss a room service order again. Our ai voice agent for restaurants takes orders 24/7 in multiple languages, handles special dietary requests, and coordinates with your kitchen staff for timely delivery to guest rooms.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• 24/7 order taking in 100+ languages</li>

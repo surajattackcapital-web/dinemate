@@ -17,9 +17,9 @@ export default function Cafes() {
         {/* Hero */}
         <section className="mb-16">
           <div className="text-center">
-            <h1 className="animated-gradient-text mb-6">AI Solutions for Cafes</h1>
+            <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Cafe Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Mobile ordering, rush hour management, and customer loyalty powered by AI
+              Mobile ordering, rush hour management, and customer loyalty powered by our ai voice agent for restaurants
             </p>
             <Link href="/contact" className="button text-lg inline-block mb-12">
               Get Started Today
@@ -40,7 +40,7 @@ export default function Cafes() {
           <div className="background-glass p-8 rounded-lg mb-8">
             <h2 className="gradient-text text-3xl mb-6">Built for Coffee Shop Speed</h2>
             <p className="text-gray-300 mb-4">
-              Cafes thrive on speed and consistency. Our AI solutions help you handle morning rushes, manage mobile orders, and keep regulars coming back.
+              Cafes thrive on speed and consistency. Our ai voice agent for restaurants helps you handle morning rushes, manage mobile orders, and keep regulars coming back.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Cafes() {
             <div>
               <h3 className="font-bold text-2xl mb-4">Morning Rush Management</h3>
               <p className="text-gray-300 mb-4">
-                The morning rush can make or break a cafe's day. DineMate AI helps you process more orders faster, reduce wait times, and keep your line moving smoothly even during peak hours from 7-9 AM.
+                The morning rush can make or break a cafe's day. Our ai voice agent for restaurants helps you process more orders faster, reduce wait times, and keep your line moving smoothly even during peak hours from 7-9 AM.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Handle 3x more mobile orders</li>

@@ -16,9 +16,9 @@ export default function AIOrderingAssistant() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">AI Ordering Assistant</h1>
+          <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Ordering Assistant</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Smart ordering through voice or chat — Perfect for drive-thrus, phone orders, and digital channels
+            Smart ordering through our ai voice agent for restaurants — Perfect for drive-thrus, phone orders, and digital channels
           </p>
         </section>
 
@@ -34,7 +34,7 @@ export default function AIOrderingAssistant() {
           <div>
             <h2 className="gradient-text text-3xl mb-6">Intelligent Order Taking</h2>
             <p className="text-gray-300 mb-4">
-              Our AI understands natural language, handles modifications, suggests upsells, and processes orders with 99% accuracy. Works across phone, drive-thru, and digital ordering channels.
+              Our ai voice agent for restaurants understands natural language, handles modifications, suggests upsells, and processes orders with 99% accuracy. Works across phone, drive-thru, and digital ordering channels.
             </p>
             <p className="text-gray-300 mb-6">
               Reduce order errors, speed up service, and free your staff to focus on food quality and guest interaction.
@@ -78,7 +78,7 @@ export default function AIOrderingAssistant() {
             <div>
               <h3 className="font-bold text-2xl mb-4">Natural Language Processing</h3>
               <p className="text-gray-300 mb-4">
-                Our AI ordering assistant understands conversational language, slang, and complex modifications. Handle requests like "I'll take the burger but hold the onions and add extra cheese" with perfect accuracy.
+                Our ai voice agent for restaurants understands conversational language, slang, and complex modifications. Handle requests like "I'll take the burger but hold the onions and add extra cheese" with perfect accuracy.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Understands dietary restrictions and allergies</li>

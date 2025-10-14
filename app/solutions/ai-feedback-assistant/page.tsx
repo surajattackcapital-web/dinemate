@@ -16,9 +16,9 @@ export default function AIFeedbackAssistant() {
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">
-          <h1 className="animated-gradient-text mb-6">AI Feedback Assistant</h1>
+          <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Feedback Assistant</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Automated guest feedback & insights — Turn every review into actionable intelligence
+            Automated guest feedback & insights powered by our ai voice agent for restaurants — Turn every review into actionable intelligence
           </p>
         </section>
 
@@ -35,7 +35,7 @@ export default function AIFeedbackAssistant() {
             <div>
               <h2 className="gradient-text text-3xl mb-6">Actionable Guest Insights</h2>
               <p className="text-gray-300 mb-4">
-                Automatically collect feedback via SMS, email, and QR codes. Our AI analyzes sentiment, identifies trends, and alerts you to issues before they become problems.
+                Automatically collect feedback via SMS, email, and QR codes using our ai voice agent for restaurants. Our AI analyzes sentiment, identifies trends, and alerts you to issues before they become problems.
               </p>
               <p className="text-gray-300 mb-6">
                 Transform guest opinions into operational improvements with real-time dashboards and automated reporting.
@@ -104,7 +104,7 @@ export default function AIFeedbackAssistant() {
             <div>
               <h3 className="font-bold text-2xl mb-4">Deep Learning Insights</h3>
               <p className="text-gray-300 mb-4">
-                Our advanced AI doesn't just collect feedback - it understands context, emotion, and intent. Identify emerging issues before they become problems and recognize positive trends to amplify.
+                Our advanced ai voice agent for restaurants doesn't just collect feedback - it understands context, emotion, and intent. Identify emerging issues before they become problems and recognize positive trends to amplify.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• Natural language understanding</li>
