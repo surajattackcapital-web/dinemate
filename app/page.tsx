@@ -90,7 +90,7 @@ export default function Home() {
       <section className="padding-section-large">
         <div className="wrapper text-center">
           <h1 className="animated-gradient-text mb-6">
-            AI-Powered Hospitality Solutions
+            AI-Powered Hospitality Solutions for Restaurants
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your restaurant operations with intelligent AI assistants for waitlists, ordering, reservations, and customer feedback

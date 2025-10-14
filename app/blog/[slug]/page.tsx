@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { generateSlug } from '@/lib/utils';
+import { getBlogPostBySlug, getAllBlogSlugs, getAllBlogPosts } from '@/lib/blog';
 import { Metadata } from 'next';
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
   
   if (!post) {
     return {
@@ -16,152 +16,48 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
-    keywords: `${post.category}, restaurant AI, ${post.title.toLowerCase().split(' ').slice(0, 5).join(', ')}`,
+    title: `${post.title} | DineMate.ai Blog`,
+    description: post.description,
+    keywords: post.keywords,
+    authors: post.author ? [{ name: post.author }] : undefined,
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       type: 'article',
       publishedTime: post.date,
-      authors: [post.author],
+      authors: post.author ? [post.author] : undefined,
+      images: post.image ? [{ url: post.image }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
+      images: post.image ? [post.image] : undefined,
     },
   };
 }
 
-// Blog posts data - must match exactly with /blog/page.tsx
-const blogPosts = [
-  {
-    id: 1,
-    slug: "restaurant-operations-automation-ai",
-    title: "Restaurant Operations Automation: The Complete AI Transformation Guide",
-    excerpt: "Discover how AI-powered automation transforms restaurant operations, reducing costs by 20-35%, improving efficiency, and delivering exceptional customer experiences at scale.",
-    date: "October 13, 2025",
-    category: "Restaurant Operations",
-    author: "DineMate AI Team",
-    readTime: "11 min read",
-    content: `<p>Comprehensive guide to AI automation covering front-of-house, back-of-house, and labor management automation. Includes real-world case studies showing 20-35% cost reduction and strategies for implementation.</p>`
-  },
-  {
-    id: 2,
-    slug: "restaurant-voice-ai-technology",
-    title: "Voice AI for Restaurants: The Future of Phone Orders and Customer Service",
-    excerpt: "Discover how voice AI technology is revolutionizing restaurant phone operations, answering 100% of calls, taking orders 24/7, and increasing revenue by 30-40%.",
-    date: "October 13, 2025",
-    category: "AI Technology",
-    author: "DineMate AI Team",
-    readTime: "10 min read",
-    content: `<p>Voice AI enables restaurants to answer 100% of calls, take perfect orders 24/7, and increase phone revenue by 30-40%. Learn about implementation strategies, ROI, and future trends.</p>`
-  },
-  {
-    id: 3,
-    slug: "ai-menu-optimization-pricing",
-    title: "AI Menu Optimization: Data-Driven Pricing and Profit Maximization",
-    excerpt: "Learn how AI-powered menu optimization increases restaurant profits by 15-30% through intelligent pricing, strategic menu design, and data-driven decision making.",
-    date: "October 13, 2025",
-    category: "Restaurant Strategy",
-    author: "DineMate AI Team",
-    readTime: "9 min read",
-    content: `<p>AI menu optimization uses data analytics to increase profits by 15-30% through intelligent pricing, strategic item placement, and menu engineering based on real customer behavior.</p>`
-  },
-  {
-    id: 4,
-    slug: "restaurant-chatbot-customer-service",
-    title: "AI Chatbots for Restaurants: 24/7 Customer Service That Scales",
-    excerpt: "Explore how AI-powered chatbots handle customer inquiries instantly, increase online orders by 40%, and provide exceptional service without additional staff costs.",
-    date: "October 13, 2025",
-    category: "Customer Experience",
-    author: "DineMate AI Team",
-    readTime: "8 min read",
-    content: `<p>AI chatbots provide instant 24/7 customer service, handling inquiries, facilitating orders, and managing reservations. Restaurants see 30-40% conversion rates and significant cost savings.</p>`
-  },
-  {
-    id: 5,
-    slug: "ai-restaurant-staff-scheduling",
-    title: "AI-Driven Staff Scheduling: Solving the Restaurant Workforce Challenge",
-    excerpt: "Learn how AI-powered staff scheduling reduces labor costs by 15-25%, prevents over/understaffing, and improves employee satisfaction in restaurants.",
-    date: "October 13, 2025",
-    category: "Restaurant Operations",
-    author: "DineMate AI Team",
-    readTime: "9 min read",
-    content: `<p>AI scheduling systems reduce labor costs by 15-25% through predictive demand forecasting, automated schedule generation, and real-time optimization while improving employee satisfaction.</p>`
-  },
-  {
-    id: 6,
-    slug: "ai-online-ordering-restaurants",
-    title: "AI-Powered Online Ordering: Transforming Restaurant Sales in 2025",
-    excerpt: "Discover how AI-powered online ordering systems are revolutionizing restaurant sales, reducing errors, and enhancing customer experience. Learn about implementation strategies and ROI.",
-    date: "October 13, 2025",
-    category: "Restaurant Technology",
-    author: "DineMate AI Team",
-    readTime: "8 min read",
-    content: `<p>AI-powered online ordering systems increase conversion rates by 20-40%, reduce errors by 85-95%, and provide personalized recommendations that boost average order values.</p>`
-  },
-  {
-    id: 7,
-    slug: "restaurant-reservation-ai-automation",
-    title: "AI-Powered Restaurant Reservation Systems: Complete Guide 2025",
-    excerpt: "Learn how AI reservation systems eliminate no-shows, optimize table management, and increase revenue by 25-40% for restaurants and hospitality businesses.",
-    date: "October 13, 2025",
-    category: "Restaurant Technology",
-    author: "DineMate AI Team",
-    readTime: "10 min read",
-    content: `<p>AI reservation systems reduce no-shows by 40-85% through intelligent reminders, predictive analytics, and automated optimization. Restaurants see 25-40% revenue increases.</p>`
-  },
-  {
-    id: 8,
-    slug: "restaurant-phone-ai-answering-service",
-    title: "AI Phone Answering for Restaurants: Never Miss Another Call or Order",
-    excerpt: "Discover how AI-powered phone answering systems help restaurants answer 100% of calls, take perfect orders 24/7, and increase phone revenue by 35-50%.",
-    date: "October 13, 2025",
-    category: "AI Technology",
-    author: "DineMate AI Team",
-    readTime: "8 min read",
-    content: `<p>AI phone answering ensures 100% call coverage, perfect order accuracy, and 24/7 availability. Restaurants capture $15,000-$50,000 additional monthly revenue.</p>`
-  },
-  {
-    id: 9,
-    slug: "ai-waitlist-management-restaurants",
-    title: "AI Waitlist Management: Revolutionizing Restaurant Guest Experience",
-    excerpt: "Discover how AI-powered waitlist management systems reduce wait times, eliminate walk-aways, and increase restaurant revenue by 20-35%. Learn implementation strategies and ROI.",
-    date: "October 13, 2025",
-    category: "Customer Experience",
-    author: "DineMate AI Team",
-    readTime: "7 min read",
-    content: `<p>AI waitlist systems optimize seating, predict wait times with 90%+ accuracy, and reduce walk-aways by 60-75%. Restaurants see 20-35% revenue increases during peak hours.</p>`
-  },
-  {
-    id: 10,
-    slug: "restaurant-feedback-management-ai",
-    title: "AI-Powered Restaurant Feedback Management: Turn Reviews Into Revenue",
-    excerpt: "Learn how AI feedback systems help restaurants analyze reviews, respond intelligently, and improve operations based on customer sentiment.",
-    date: "October 13, 2025",
-    category: "Analytics",
-    author: "DineMate AI Team",
-    readTime: "6 min read",
-    content: `<p>AI feedback management analyzes reviews across all platforms, identifies trends, and provides actionable insights. Restaurants improve ratings by 0.3-0.5 stars and boost revenue.</p>`
-  }
-];
-
 // Generate static params for all blog posts
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
+  const slugs = getAllBlogSlugs();
+  return slugs.map((slug) => ({
+    slug: slug,
   }));
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+
+  // Get related posts (same category, different post)
+  const allPosts = await getAllBlogPosts();
+  const relatedPosts = allPosts
+    .filter(p => p.category === post.category && p.slug !== post.slug)
+    .slice(0, 3);
 
   return (
     <div className="wrapper padding-section-large">
@@ -174,98 +70,300 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {/* Article Header */}
         <article>
           <header className="mb-12">
-            <div className="flex items-center gap-3 text-sm text-purple-400 mb-4">
-              <span>{post.category}</span>
-              <span>•</span>
-              <span>{post.date}</span>
-              <span>•</span>
-              <span>{post.readTime}</span>
+            {/* Category & Read Time */}
+            <div className="flex gap-4 items-center mb-6">
+              <span className="px-4 py-1 bg-purple-900/40 border border-purple-500/40 rounded-full text-purple-200 text-sm font-medium">
+                {post.category}
+              </span>
+              <span className="text-gray-300 text-sm">{post.readTime} read</span>
             </div>
-            <h1 className="animated-gradient-text mb-6">{post.title}</h1>
-            <div className="flex items-center gap-4 text-gray-400">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-xl font-bold">
-                {post.author.split(' ').map(n => n[0]).join('')}
-              </div>
+
+            {/* Title */}
+            <h1 className="animated-gradient-text mb-6" style={{ fontSize: '3rem', lineHeight: '1.2' }}>{post.title}</h1>
+
+            {/* Description */}
+            <p className="text-xl text-gray-200 mb-8">{post.description}</p>
+
+            {/* Meta */}
+            <div className="flex flex-wrap gap-6 text-gray-300 text-sm border-t border-b border-gray-800 py-6">
+              {post.author && (
+                <div>
+                  <span className="text-purple-300 font-semibold">Author:</span> {post.author}
+                </div>
+              )}
               <div>
-                <p className="text-white font-semibold">{post.author}</p>
-                <p className="text-sm">Contributing Author</p>
+                <span className="text-purple-300 font-semibold">Published:</span>{' '}
+                {new Date(post.date).toLocaleDateString('en-US', { 
+                  month: 'long', 
+                  day: 'numeric', 
+                  year: 'numeric' 
+                })}
               </div>
             </div>
+
+            {/* Featured Image */}
+            {post.image && (
+              <div className="mt-8 rounded-2xl overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
           </header>
 
           {/* Article Content */}
           <div 
-            className="blog-content prose prose-invert prose-lg max-w-none mb-12"
+            className="blog-content prose prose-invert prose-lg max-w-none mb-16"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* Article Footer */}
-          <div className="border-t border-white/10 pt-8">
-            <div className="background-glass p-8 rounded-lg">
-              <h3 className="gradient-text text-2xl mb-4">Ready to Transform Your Restaurant?</h3>
-              <p className="text-gray-300 mb-6">
-                See how DineMate.ai can help you implement these strategies in your restaurant.
-              </p>
-              <Link href="/contact" className="button">
-                Schedule a Demo
-              </Link>
+          {/* Tags */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="mb-12">
+              <h3 className="text-gray-300 text-sm mb-4 font-semibold">Tags:</h3>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag, index) => (
+                  <span 
+                    key={index}
+                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-200 text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </article>
 
+        {/* CTA Section */}
+        <div className="background-glass p-12 rounded-2xl text-center mb-16">
+          <h2 className="gradient-text text-3xl mb-4">Ready to Transform Your Restaurant?</h2>
+          <p className="text-gray-200 mb-6 max-w-2xl mx-auto text-lg">
+            Discover how DineMate.ai can help you implement these strategies with cutting-edge AI automation
+          </p>
+          <Link href="/contact" className="button text-lg">
+            Schedule Your Free Demo
+          </Link>
+        </div>
+
         {/* Related Posts */}
-        <section className="mt-16">
-          <h2 className="gradient-text text-3xl mb-8">Related Articles</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {blogPosts
-              .filter(p => p.slug !== post.slug && p.category === post.category)
-              .slice(0, 2)
-              .map((relatedPost) => (
+        {relatedPosts.length > 0 && (
+          <section>
+            <h2 className="gradient-text text-3xl mb-8">Related Articles</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {relatedPosts.map((relatedPost) => (
                 <Link 
-                  key={relatedPost.id}
+                  key={relatedPost.slug}
                   href={`/blog/${relatedPost.slug}`}
-                  className="background-glass p-6 rounded-lg hover:scale-105 transition-transform"
+                  className="gradient-border"
                 >
-                  <div className="flex items-center gap-2 text-sm text-purple-400 mb-3">
-                    <span>{relatedPost.category}</span>
-                    <span>•</span>
-                    <span>{relatedPost.date}</span>
+                  <div className="gradient-border-inner h-full flex flex-col">
+                    <div className="relative h-40 overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src={relatedPost.image} 
+                        alt={relatedPost.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <span className="text-purple-300 text-sm mb-2 font-medium">{relatedPost.category}</span>
+                    <h3 className="text-lg font-bold gradient-text mb-2 flex-1">{relatedPost.title}</h3>
+                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">{relatedPost.description}</p>
+                    <span className="text-purple-300 text-sm hover:text-purple-200">Read More →</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{relatedPost.title}</h3>
-                  <p className="text-gray-300 text-sm">{relatedPost.excerpt}</p>
                 </Link>
               ))}
-          </div>
-        </section>
+            </div>
+          </section>
+        )}
 
+        {/* Article Styles */}
         <style dangerouslySetInnerHTML={{ __html: `
           .blog-content {
-            color: #d1d5db;
+            color: #e5e7eb;
+            line-height: 1.8;
           }
-          .blog-content h2 {
+          
+          .blog-content h1,
+          .blog-content h2,
+          .blog-content h3,
+          .blog-content h4 {
             color: #ffffff;
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(90deg, #8009FF, #F200FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+          
+          /* Convert H1 in content to H2 styling for SEO (only one H1 per page) */
+          .blog-content h1 {
             font-size: 1.875rem;
-            font-weight: bold;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            margin-top: 2.5rem;
           }
+          
+          .blog-content h2 {
+            font-size: 1.875rem;
+            margin-top: 2.5rem;
+          }
+          
           .blog-content h3 {
-            color: #ffffff;
             font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
           }
+          
+          .blog-content h4 {
+            font-size: 1.25rem;
+          }
+          
           .blog-content p {
-            margin-bottom: 1.25rem;
-            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            color: #e5e7eb;
           }
-          .blog-content ul, .blog-content ol {
-            margin-bottom: 1.25rem;
-            padding-left: 1.5rem;
+          
+          .blog-content ul,
+          .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.75rem;
+            color: #e5e7eb;
           }
+          
           .blog-content li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+          }
+          
+          .blog-content strong {
+            color: #f9fafb;
+            font-weight: 600;
+          }
+          
+          .blog-content a {
+            color: #a78bfa;
+            text-decoration: underline;
+          }
+          
+          .blog-content a:hover {
+            color: #c4b5fd;
+          }
+          
+          .blog-content blockquote {
+            border-left: 4px solid #8009FF;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: #d1d5db;
+            font-style: italic;
+          }
+          
+          .blog-content code {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.875em;
+            color: #c4b5fd;
+          }
+          
+          .blog-content pre {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            margin: 2rem 0;
+          }
+          
+          .blog-content pre code {
+            background: transparent;
+            border: none;
+            padding: 0;
+          }
+          
+          .blog-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+          }
+          
+          .blog-content table th,
+          .blog-content table td {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+          }
+          
+          .blog-content table th {
+            background: rgba(139, 92, 246, 0.3);
+            color: #f9fafb;
+            font-weight: 600;
+          }
+          
+          /* Ensure table body text is always visible */
+          .blog-content table td {
+            color: #e5e7eb;
+          }
+          
+          .blog-content table tr:nth-child(even) {
+            background: rgba(139, 92, 246, 0.05);
+          }
+          
+          .blog-content img {
+            border-radius: 1rem;
+            margin: 2rem 0;
+          }
+          
+          .blog-content hr {
+            border: none;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            margin: 3rem 0;
+          }
+
+          /* Custom styled divs from markdown - force dark text for visibility */
+          .blog-content div[style*="background"],
+          .blog-content div[class*="challenge"],
+          .blog-content div[class*="solution"],
+          .blog-content div[class*="problem"],
+          .blog-content div[class*="overview"] {
+            margin: 2rem 0;
+          }
+          
+          /* Force all text in styled divs to be dark and visible */
+          .blog-content div[style*="background"] *,
+          .blog-content div[class*="challenge"] *,
+          .blog-content div[class*="solution"] *,
+          .blog-content div[class*="problem"] *,
+          .blog-content div[class*="overview"] * {
+            color: #1f2937 !important;
+          }
+          
+          /* Ensure ALL tables everywhere have visible text - comprehensive coverage */
+          .blog-content table td,
+          .blog-content table td *,
+          .blog-content table td p,
+          .blog-content table td span,
+          .blog-content table td strong,
+          .blog-content table tbody td,
+          .blog-content table tbody td *,
+          .blog-content div[style*="background"] table td,
+          .blog-content div[style*="background"] table td *,
+          .blog-content div[style*="background"] tbody td,
+          .blog-content div[style*="background"] tbody td *,
+          .blog-content div[style*="background"] tr td,
+          .blog-content div[style*="background"] tr td * {
+            color: #1f2937 !important;
+          }
+          
+          /* Keep table headers with white text */
+          .blog-content table th,
+          .blog-content table th *,
+          .blog-content table thead th,
+          .blog-content table thead th *,
+          .blog-content div[style*="background"] table th,
+          .blog-content div[style*="background"] table th *,
+          .blog-content div[style*="background"] table thead th,
+          .blog-content div[style*="background"] table thead th * {
+            color: white !important;
           }
         `}} />
       </div>

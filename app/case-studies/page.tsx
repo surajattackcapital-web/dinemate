@@ -1,78 +1,20 @@
 import Link from 'next/link';
+import { getAllCaseStudies, getIndustryEmoji } from '@/lib/case-studies';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Restaurant AI Case Studies - Real Success Stories & ROI Data',
+export const metadata: Metadata = {
+  title: 'Restaurant AI Case Studies - Real Success Stories & ROI Data | DineMate.ai',
   description: 'Explore real success stories from restaurants using DineMate.ai. See how leading establishments achieved 40%+ revenue growth, reduced costs, and transformed operations with AI automation.',
   keywords: 'restaurant AI case studies, hospitality success stories, restaurant automation ROI, AI implementation results, restaurant technology case studies',
   openGraph: {
     title: 'Restaurant AI Case Studies - DineMate.ai Success Stories',
     description: 'Real success stories from restaurants achieving 40%+ revenue growth with AI automation.',
+    type: 'website',
   },
 };
 
-export default function CaseStudies() {
-  const caseStudies = [
-    {
-      id: 1,
-      slug: "fine-dining-restaurant-ai-phone-system",
-      company: "Le Jardin Fine Dining",
-      industry: "Fine Dining",
-      challenge: "Missing 40% of calls during peak hours, inconsistent reservation management",
-      result: "45% revenue increase, 100% call answer rate",
-      revenue: "+$180K annual revenue",
-      thumbnail: "🍽️"
-    },
-    {
-      id: 2,
-      slug: "multi-location-chain-labor-optimization",
-      company: "Southwest Bowl Company",
-      industry: "Fast Casual Chain",
-      challenge: "High labor costs (38% of revenue), inefficient scheduling, 68% employee turnover",
-      result: "23% labor cost reduction, 42% decrease in turnover",
-      revenue: "$840K annual savings",
-      thumbnail: "🥗"
-    },
-    {
-      id: 3,
-      slug: "pizza-chain-online-ordering-transformation",
-      company: "Artisan Pizza Co.",
-      industry: "Pizza / Quick Service",
-      challenge: "High third-party delivery fees, poor online conversion, limited customer data",
-      result: "127% increase in online orders, 615% ROI",
-      revenue: "+$1.8M annual revenue",
-      thumbnail: "🍕"
-    },
-    {
-      id: 4,
-      slug: "hotel-restaurant-guest-experience-ai",
-      company: "The Charleston Manor",
-      industry: "Hotel & Hospitality",
-      challenge: "Low restaurant capture rate (32%), inconsistent service, limited room service",
-      result: "52% F&B revenue increase, 78% capture rate",
-      revenue: "+$780K annual revenue",
-      thumbnail: "🏨"
-    },
-    {
-      id: 5,
-      slug: "catering-company-ai-operations-automation",
-      company: "Emerald City Catering",
-      industry: "Catering & Events",
-      challenge: "Manual processes limiting scale, high operational errors, limited sales capacity",
-      result: "225% revenue growth, 68% error reduction",
-      revenue: "+$5.4M revenue increase",
-      thumbnail: "🎉"
-    },
-    {
-      id: 6,
-      slug: "coffee-shop-chain-ai-customer-engagement",
-      company: "Pacific Coast Coffee Co.",
-      industry: "Coffee & Cafe",
-      challenge: "Low loyalty enrollment (5%), poor retention, inconsistent experience",
-      result: "340% loyalty growth, 28% check increase",
-      revenue: "+$1.2M annual revenue",
-      thumbnail: "☕"
-    }
-  ];
+export default async function CaseStudies() {
+  const caseStudies = await getAllCaseStudies();
 
   return (
     <div className="wrapper padding-section-large">
@@ -81,40 +23,86 @@ export default function CaseStudies() {
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Success Stories</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real results from restaurants and hospitality businesses using DineMate.ai
+            Real results from restaurants and hospitality businesses transforming their operations with DineMate.ai
           </p>
         </section>
 
-        {/* Case Studies Grid */}
-        <section className="grid md:grid-cols-2 gap-8 mb-16">
-          {caseStudies.map((study) => (
-            <article key={study.id} className="gradient-border">
+        {/* Featured Case Study */}
+        {caseStudies.length > 0 && (
+          <section className="mb-20">
+            <Link href={`/case-studies/${caseStudies[0].slug}`} className="gradient-border block">
               <div className="gradient-border-inner">
-                <div className="text-6xl mb-4 text-center">{study.thumbnail}</div>
-                <h2 className="text-2xl font-bold gradient-text mb-2">{study.company}</h2>
-                <p className="text-purple-400 mb-4">{study.industry}</p>
-                
-                <div className="space-y-3 mb-6">
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">Challenge:</p>
-                    <p className="text-gray-300">{study.challenge}</p>
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="relative h-80 overflow-hidden rounded-xl">
+                    <img 
+                      src={caseStudies[0].image} 
+                      alt={caseStudies[0].title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold">
+                      Featured Success Story
+                    </div>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 mb-1">Result:</p>
-                    <p className="text-white font-semibold">{study.result}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">Impact:</p>
-                    <p className="text-green-400 font-semibold">{study.revenue}</p>
+                    <div className="text-6xl mb-4">{getIndustryEmoji(caseStudies[0].industry)}</div>
+                    <p className="text-purple-400 mb-2">{caseStudies[0].industry}</p>
+                    <h2 className="text-3xl font-bold gradient-text mb-4">{caseStudies[0].company}</h2>
+                    <p className="text-gray-300 mb-6">{caseStudies[0].description}</p>
+                    <div className="space-y-3 mb-6">
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">Challenge:</p>
+                        <p className="text-gray-300">{caseStudies[0].challenge}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400 mb-1">Results:</p>
+                        <p className="text-green-400 font-semibold text-lg">{caseStudies[0].results}</p>
+                      </div>
+                    </div>
+                    <span className="text-purple-400 hover:text-purple-300 font-semibold">Read Full Case Study →</span>
                   </div>
                 </div>
-
-                <Link href={`/case-studies/${study.slug}`} className="text-purple-400 hover:underline font-semibold">
-                  Read Full Case Study →
-                </Link>
               </div>
-            </article>
-          ))}
+            </Link>
+          </section>
+        )}
+
+        {/* Case Studies Grid */}
+        <section className="mb-16">
+          <h2 className="gradient-text text-3xl mb-8">All Case Studies</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.slice(1).map((study) => (
+              <Link key={study.slug} href={`/case-studies/${study.slug}`} className="gradient-border h-full">
+                <div className="gradient-border-inner flex flex-col h-full">
+                  <div className="relative h-48 overflow-hidden rounded-xl mb-4">
+                    <img 
+                      src={study.image} 
+                      alt={study.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="text-5xl mb-3 text-center">{getIndustryEmoji(study.industry)}</div>
+                  <p className="text-purple-400 text-sm mb-2">{study.industry}</p>
+                  <h3 className="text-xl font-bold gradient-text mb-3 flex-1">{study.company}</h3>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">Challenge:</p>
+                      <p className="text-sm text-gray-300 line-clamp-2">{study.challenge}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">Results:</p>
+                      <p className="text-sm text-green-400 font-semibold">{study.results}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                    <span className="text-xs text-gray-500">{study.readTime}</span>
+                    <span className="text-purple-400 text-sm hover:text-purple-300">Read More →</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </section>
 
         {/* Stats Overview */}
@@ -140,18 +128,35 @@ export default function CaseStudies() {
           </div>
         </section>
 
+        {/* Industries Section */}
+        <section className="mb-16">
+          <h3 className="text-xl font-semibold mb-4 text-center text-gray-300">Industries We Serve</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {Array.from(new Set(caseStudies.map(cs => cs.industry))).map((industry) => (
+              <span 
+                key={industry}
+                className="px-6 py-2 bg-purple-900/30 border border-purple-500/30 rounded-full text-purple-300 text-sm flex items-center gap-2"
+              >
+                <span>{getIndustryEmoji(industry)}</span>
+                {industry}
+              </span>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="text-center">
-          <h2 className="gradient-text mb-4">Ready to Write Your Success Story?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Join hundreds of hospitality businesses achieving remarkable results with AI
-          </p>
-          <Link href="/contact" className="button">
-            Start Your Journey
-          </Link>
+          <div className="background-glass p-12 rounded-2xl">
+            <h2 className="gradient-text text-3xl mb-4">Ready to Write Your Success Story?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join hundreds of hospitality businesses achieving remarkable results with AI automation
+            </p>
+            <Link href="/contact" className="button text-lg">
+              Start Your Journey
+            </Link>
+          </div>
         </section>
       </div>
     </div>
   );
 }
-

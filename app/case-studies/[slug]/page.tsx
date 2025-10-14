@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { generateSlug } from '@/lib/utils';
+import { getCaseStudyBySlug, getAllCaseStudySlugs, getAllCaseStudies, getIndustryEmoji } from '@/lib/case-studies';
 import { Metadata } from 'next';
 
 // Generate metadata for each case study
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const study = caseStudies.find(s => s.slug === slug);
+  const study = await getCaseStudyBySlug(slug);
   
   if (!study) {
     return {
@@ -16,154 +16,47 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${study.company} - ${study.result} | Restaurant AI Case Study`,
-    description: `${study.company}, a ${study.industry} in ${study.location}, achieved ${study.result} with DineMate.ai. ${study.description}`,
-    keywords: `${study.company} case study, ${study.industry} AI, restaurant automation success, ${study.result.toLowerCase()}, restaurant AI ROI`,
+    title: `${study.title} | DineMate.ai Case Study`,
+    description: study.description,
+    keywords: `${study.company} case study, ${study.industry} AI, restaurant automation success, ${study.results}, restaurant AI ROI`,
     openGraph: {
-      title: `${study.company} - ${study.result}`,
-      description: `How ${study.company} transformed their operations with DineMate.ai: ${study.result}`,
+      title: study.title,
+      description: study.description,
       type: 'article',
+      publishedTime: study.date,
+      authors: study.author ? [study.author] : undefined,
+      images: study.image ? [{ url: study.image }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${study.company} - ${study.result}`,
-      description: `${study.industry} success story: ${study.result}`,
+      title: study.title,
+      description: study.description,
+      images: study.image ? [study.image] : undefined,
     },
   };
 }
 
-// Case studies data - must match exactly with /case-studies/page.tsx
-const caseStudies = [
-  {
-    id: 1,
-    slug: "fine-dining-restaurant-ai-phone-system",
-    company: "Le Jardin Fine Dining",
-    industry: "Fine Dining",
-    location: "San Francisco, CA",
-    challenge: "Missing 40% of calls during peak hours, inconsistent reservation management",
-    result: "45% revenue increase, 100% call answer rate",
-    revenue: "+$180K annual revenue",
-    thumbnail: "🍽️",
-    description: "A 65-room luxury boutique hotel struggling to capture guests for dining and deliver consistent service.",
-    story: `<p>Le Jardin implemented DineMate AI's phone system achieving 45% revenue increase and 100% call answer rate, capturing all reservation opportunities and eliminating missed revenue.</p>`,
-    metrics: [
-      { label: "Revenue Increase", value: "45%" },
-      { label: "Call Answer Rate", value: "100%" },
-      { label: "No-Show Reduction", value: "30%" },
-      { label: "Additional Revenue", value: "$180K/year" }
-    ]
-  },
-  {
-    id: 2,
-    slug: "multi-location-chain-labor-optimization",
-    company: "Southwest Bowl Company",
-    industry: "Fast Casual Chain",
-    location: "Texas (Multi-Location)",
-    challenge: "High labor costs (38% of revenue), inefficient scheduling, 68% employee turnover",
-    result: "23% labor cost reduction, 42% decrease in turnover",
-    revenue: "$840K annual savings",
-    thumbnail: "🥗",
-    description: "A 35-location fast-casual chain struggling with soaring labor costs and high turnover.",
-    story: `<p>Southwest Bowl Company implemented DineMate AI labor optimization achieving 23% labor cost reduction and $840K annual savings through predictive scheduling and workforce management.</p>`,
-    metrics: [
-      { label: "Labor Cost Reduction", value: "23%" },
-      { label: "Annual Savings", value: "$840K" },
-      { label: "Turnover Decrease", value: "42%" },
-      { label: "ROI", value: "5,014%" }
-    ]
-  },
-  {
-    id: 3,
-    slug: "pizza-chain-online-ordering-transformation",
-    company: "Artisan Pizza Co.",
-    industry: "Pizza / Quick Service",
-    location: "Northeast US",
-    challenge: "High third-party delivery fees, poor online conversion, limited customer data",
-    result: "127% increase in online orders, 615% ROI",
-    revenue: "+$1.8M annual revenue",
-    thumbnail: "🍕",
-    description: "A 28-location pizza chain losing profit to third-party platforms and struggling with poor online conversion.",
-    story: `<p>Artisan Pizza Co. implemented DineMate AI online ordering achieving 127% increase in orders, $450K reduction in delivery fees, and 615% ROI in year one.</p>`,
-    metrics: [
-      { label: "Order Increase", value: "127%" },
-      { label: "Commission Savings", value: "$450K" },
-      { label: "Revenue Growth", value: "$1.8M" },
-      { label: "ROI", value: "615%" }
-    ]
-  },
-  {
-    id: 4,
-    slug: "hotel-restaurant-guest-experience-ai",
-    company: "The Charleston Manor",
-    industry: "Hotel & Hospitality",
-    location: "Charleston, SC",
-    challenge: "Low restaurant capture rate (32%), inconsistent service, limited room service",
-    result: "52% F&B revenue increase, 78% capture rate",
-    revenue: "+$780K annual revenue",
-    thumbnail: "🏨",
-    description: "A boutique hotel struggling to capture guests for dining and deliver personalized service.",
-    story: `<p>The Charleston Manor implemented DineMate AI guest experience platform achieving 52% F&B revenue increase and 78% restaurant capture rate from hotel guests.</p>`,
-    metrics: [
-      { label: "F&B Revenue", value: "+52%" },
-      { label: "Capture Rate", value: "78%" },
-      { label: "Guest Satisfaction", value: "+41%" },
-      { label: "Additional Revenue", value: "$780K/year" }
-    ]
-  },
-  {
-    id: 5,
-    slug: "catering-company-ai-operations-automation",
-    company: "Emerald City Catering",
-    industry: "Catering & Events",
-    location: "Seattle, WA",
-    challenge: "Manual processes limiting scale, high operational errors, limited sales capacity",
-    result: "225% revenue growth, 68% error reduction",
-    revenue: "+$5.4M revenue increase",
-    thumbnail: "🎉",
-    description: "A corporate catering company constrained by manual processes preventing growth.",
-    story: `<p>Emerald City Catering implemented DineMate AI complete operations platform achieving 225% revenue growth and $5.4M increase through end-to-end automation.</p>`,
-    metrics: [
-      { label: "Revenue Growth", value: "225%" },
-      { label: "Error Reduction", value: "68%" },
-      { label: "Revenue Increase", value: "$5.4M" },
-      { label: "ROI", value: "850%" }
-    ]
-  },
-  {
-    id: 6,
-    slug: "coffee-shop-chain-ai-customer-engagement",
-    company: "Pacific Coast Coffee Co.",
-    industry: "Coffee & Cafe",
-    location: "California (Multi-Location)",
-    challenge: "Low loyalty enrollment (5%), poor retention, inconsistent experience",
-    result: "340% loyalty growth, 28% check increase",
-    revenue: "+$1.2M annual revenue",
-    thumbnail: "☕",
-    description: "A 22-location coffee chain struggling with low customer retention and minimal loyalty enrollment.",
-    story: `<p>Pacific Coast Coffee Co. implemented DineMate AI customer engagement platform achieving 340% loyalty membership growth and $1.2M additional annual revenue.</p>`,
-    metrics: [
-      { label: "Loyalty Growth", value: "340%" },
-      { label: "Check Increase", value: "28%" },
-      { label: "Revenue Growth", value: "$1.2M" },
-      { label: "ROI", value: "485%" }
-    ]
-  }
-];
-
 // Generate static params for all case studies
 export function generateStaticParams() {
-  return caseStudies.map((study) => ({
-    slug: study.slug,
+  const slugs = getAllCaseStudySlugs();
+  return slugs.map((slug) => ({
+    slug: slug,
   }));
 }
 
 export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const study = caseStudies.find(s => s.slug === slug);
+  const study = await getCaseStudyBySlug(slug);
 
   if (!study) {
     notFound();
   }
+
+  // Get related case studies (same industry, different study)
+  const allStudies = await getAllCaseStudies();
+  const relatedStudies = allStudies
+    .filter(s => s.slug !== study.slug)
+    .slice(0, 2);
 
   return (
     <div className="wrapper padding-section-large">
@@ -173,47 +66,102 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           ← Back to Case Studies
         </Link>
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="text-8xl mb-6">{study.thumbnail}</div>
-          <h1 className="animated-gradient-text mb-4">{study.company}</h1>
-          <div className="flex flex-wrap justify-center gap-4 text-gray-300 mb-6">
-            <span className="flex items-center gap-2">
-              <span className="text-purple-400">Industry:</span> {study.industry}
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-2">
-              <span className="text-purple-400">Location:</span> {study.location}
-            </span>
+        {/* Article Header */}
+        <article>
+          <header className="mb-12">
+            {/* Company Badge */}
+            <div className="flex gap-4 items-center mb-6">
+              <div className="text-6xl">{getIndustryEmoji(study.industry)}</div>
+              <div>
+                <p className="text-purple-300 text-sm mb-1 font-medium">{study.industry}</p>
+                {study.location && (
+                  <p className="text-gray-200 text-sm">📍 {study.location}</p>
+                )}
           </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{study.description}</p>
         </div>
+
+            {/* Title */}
+            <h1 className="animated-gradient-text mb-6" style={{ fontSize: '3rem', lineHeight: '1.2' }}>{study.title}</h1>
+
+            {/* Description */}
+            <p className="text-xl text-gray-200 mb-8">{study.description}</p>
 
         {/* Key Metrics */}
-        <div className="background-glass p-8 rounded-2xl mb-16">
-          <h2 className="gradient-text text-2xl mb-8 text-center">Key Results</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {study.metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold gradient-text mb-2">{metric.value}</div>
-                <p className="text-gray-300">{metric.label}</p>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="background-glass p-6 rounded-xl">
+                <p className="text-sm text-gray-300 mb-2 font-semibold">Challenge</p>
+                <p className="text-gray-100">{study.challenge}</p>
               </div>
-            ))}
+              <div className="background-glass p-6 rounded-xl">
+                <p className="text-sm text-purple-300 mb-2 font-semibold">Solution</p>
+                <p className="text-purple-200">{study.solution}</p>
+              </div>
+              <div className="background-glass p-6 rounded-xl">
+                <p className="text-sm text-green-300 mb-2 font-semibold">Results</p>
+                <p className="text-green-300 font-semibold text-lg">{study.results}</p>
+              </div>
+            </div>
+
+            {/* Meta */}
+            <div className="flex flex-wrap gap-6 text-gray-300 text-sm border-t border-b border-gray-800 py-6">
+              {study.author && (
+                <div>
+                  <span className="text-purple-300 font-semibold">By:</span> {study.author}
+                </div>
+              )}
+              <div>
+                <span className="text-purple-300 font-semibold">Published:</span>{' '}
+                {new Date(study.date).toLocaleDateString('en-US', { 
+                  month: 'long', 
+                  day: 'numeric', 
+                  year: 'numeric' 
+                })}
+              </div>
+              <div>
+                <span className="text-purple-300 font-semibold">Read Time:</span> {study.readTime}
           </div>
         </div>
 
-        {/* Story */}
-        <article className="mb-16">
+            {/* Featured Image */}
+            {study.image && (
+              <div className="mt-8 rounded-2xl overflow-hidden">
+                <img 
+                  src={study.image} 
+                  alt={study.title}
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
+          </header>
+
+          {/* Case Study Content */}
           <div 
-            className="case-study-content prose prose-invert prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: study.story }}
+            className="case-study-content prose prose-invert prose-lg max-w-none mb-16"
+            dangerouslySetInnerHTML={{ __html: study.content }}
           />
+
+          {/* Tags */}
+          {study.tags && study.tags.length > 0 && (
+            <div className="mb-12">
+              <h3 className="text-gray-300 text-sm mb-4 font-semibold">Tags:</h3>
+              <div className="flex flex-wrap gap-2">
+                {study.tags.map((tag, index) => (
+                  <span 
+                    key={index}
+                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-200 text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
 
         {/* CTA */}
-        <div className="background-glass p-12 rounded-2xl text-center">
+        <div className="background-glass p-12 rounded-2xl text-center mb-16">
           <h2 className="gradient-text text-3xl mb-4">Ready for Similar Results?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-200 mb-6 max-w-2xl mx-auto text-lg">
             See how DineMate.ai can transform your restaurant operations like we did for {study.company}
           </p>
           <Link href="/contact" className="button text-lg">
@@ -222,60 +170,226 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </div>
 
         {/* Related Case Studies */}
+        {relatedStudies.length > 0 && (
         <section className="mt-16">
           <h2 className="gradient-text text-3xl mb-8">More Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {caseStudies
-              .filter(s => s.slug !== study.slug)
-              .slice(0, 2)
-              .map((relatedStudy) => (
+              {relatedStudies.map((relatedStudy) => (
                 <Link 
-                  key={relatedStudy.id}
+                  key={relatedStudy.slug}
                   href={`/case-studies/${relatedStudy.slug}`}
                   className="gradient-border"
                 >
                   <div className="gradient-border-inner">
-                    <div className="text-6xl mb-4 text-center">{relatedStudy.thumbnail}</div>
+                    <div className="relative h-48 overflow-hidden rounded-xl mb-4">
+                      <img 
+                        src={relatedStudy.image} 
+                        alt={relatedStudy.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="text-5xl mb-3 text-center">{getIndustryEmoji(relatedStudy.industry)}</div>
                     <h3 className="text-2xl font-bold gradient-text mb-2">{relatedStudy.company}</h3>
-                    <p className="text-purple-400 mb-4">{relatedStudy.industry}</p>
-                    <p className="text-gray-300 mb-3">{relatedStudy.description}</p>
-                    <p className="text-green-400 font-semibold">{relatedStudy.revenue}</p>
+                    <p className="text-purple-300 mb-4 font-medium">{relatedStudy.industry}</p>
+                    <p className="text-gray-200 mb-3 line-clamp-2">{relatedStudy.description}</p>
+                    <p className="text-green-300 font-semibold">{relatedStudy.results}</p>
                   </div>
                 </Link>
               ))}
           </div>
         </section>
+        )}
 
+        {/* Article Styles */}
         <style dangerouslySetInnerHTML={{ __html: `
           .case-study-content {
-            color: #d1d5db;
+            color: #e5e7eb;
+            line-height: 1.8;
           }
-          .case-study-content h2 {
+          
+          .case-study-content h1,
+          .case-study-content h2,
+          .case-study-content h3,
+          .case-study-content h4 {
             color: #ffffff;
-            font-size: 1.875rem;
             font-weight: bold;
             margin-top: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             background: linear-gradient(90deg, #8009FF, #F200FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
           }
+          
+          /* Convert H1 in content to H2 styling for SEO (only one H1 per page) */
+          .case-study-content h1 {
+            font-size: 1.875rem;
+            margin-top: 2.5rem;
+          }
+          
+          .case-study-content h2 {
+            font-size: 1.875rem;
+            margin-top: 2.5rem;
+          }
+          
+          .case-study-content h3 {
+            font-size: 1.5rem;
+          }
+          
+          .case-study-content h4 {
+            font-size: 1.25rem;
+          }
+          
           .case-study-content p {
-            margin-bottom: 1.25rem;
-            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            color: #e5e7eb;
           }
-          .case-study-content ul {
-            margin-bottom: 1.25rem;
-            padding-left: 1.5rem;
+          
+          .case-study-content ul,
+          .case-study-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.75rem;
+            color: #e5e7eb;
           }
+          
           .case-study-content li {
             margin-bottom: 0.75rem;
-            line-height: 1.6;
+            line-height: 1.7;
+          }
+          
+          .case-study-content strong {
+            color: #f9fafb;
+            font-weight: 600;
+          }
+          
+          .case-study-content a {
+            color: #a78bfa;
+            text-decoration: underline;
+          }
+          
+          .case-study-content a:hover {
+            color: #c4b5fd;
+          }
+          
+          .case-study-content blockquote {
+            border-left: 4px solid #8009FF;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: #d1d5db;
+            font-style: italic;
+          }
+          
+          .case-study-content code {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.875em;
+            color: #c4b5fd;
+          }
+          
+          .case-study-content pre {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            margin: 2rem 0;
+          }
+          
+          .case-study-content pre code {
+            background: transparent;
+            border: none;
+            padding: 0;
+          }
+          
+          .case-study-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+          }
+          
+          .case-study-content table th,
+          .case-study-content table td {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+          }
+          
+          .case-study-content table th {
+            background: rgba(139, 92, 246, 0.3);
+            color: #f9fafb;
+            font-weight: 600;
+          }
+          
+          /* Ensure table body text is always visible */
+          .case-study-content table td {
+            color: #e5e7eb;
+          }
+          
+          .case-study-content table tr:nth-child(even) {
+            background: rgba(139, 92, 246, 0.05);
+          }
+          
+          .case-study-content img {
+            border-radius: 1rem;
+            margin: 2rem 0;
+          }
+          
+          .case-study-content hr {
+            border: none;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            margin: 3rem 0;
+          }
+
+          /* Custom styled divs from markdown - force dark text for visibility */
+          .case-study-content div[style*="background"],
+          .case-study-content div[class*="challenge"],
+          .case-study-content div[class*="solution"],
+          .case-study-content div[class*="problem"],
+          .case-study-content div[class*="overview"] {
+            margin: 2rem 0;
+            border-radius: 0.75rem;
+          }
+          
+          /* Force all text in styled divs to be dark and visible */
+          .case-study-content div[style*="background"] *,
+          .case-study-content div[class*="challenge"] *,
+          .case-study-content div[class*="solution"] *,
+          .case-study-content div[class*="problem"] *,
+          .case-study-content div[class*="overview"] * {
+            color: #1f2937 !important;
+          }
+          
+          /* Ensure ALL tables everywhere have visible text - comprehensive coverage */
+          .case-study-content table td,
+          .case-study-content table td *,
+          .case-study-content table td p,
+          .case-study-content table td span,
+          .case-study-content table td strong,
+          .case-study-content table tbody td,
+          .case-study-content table tbody td *,
+          .case-study-content div[style*="background"] table td,
+          .case-study-content div[style*="background"] table td *,
+          .case-study-content div[style*="background"] tbody td,
+          .case-study-content div[style*="background"] tbody td *,
+          .case-study-content div[style*="background"] tr td,
+          .case-study-content div[style*="background"] tr td * {
+            color: #1f2937 !important;
+          }
+          
+          /* Keep table headers with white text */
+          .case-study-content table th,
+          .case-study-content table th *,
+          .case-study-content table thead th,
+          .case-study-content table thead th *,
+          .case-study-content div[style*="background"] table th,
+          .case-study-content div[style*="background"] table th *,
+          .case-study-content div[style*="background"] table thead th,
+          .case-study-content div[style*="background"] table thead th * {
+            color: white !important;
           }
         `}} />
       </div>
     </div>
   );
 }
-
