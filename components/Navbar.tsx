@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 background-glass">
-      <div className="max-w-[90rem] mx-auto px-4">
+      <div className="max-w-[90rem] mx-auto" style={{ paddingLeft: '10px', paddingRight: '10px' }}>
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="text-2xl font-bold gradient-text">
             DineMate.ai

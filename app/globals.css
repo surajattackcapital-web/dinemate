@@ -67,19 +67,19 @@ h3 {
 .wrapper {
   max-width: var(--wrapper-max-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 10px;
 }
 
 .padding-section-large {
-  padding: 4rem 2rem;
+  padding: 4rem 10px;
 }
 
 .padding-section-medium {
-  padding: 3rem 2rem;
+  padding: 3rem 10px;
 }
 
 .padding-section-small {
-  padding: 2rem;
+  padding: 2rem 10px;
 }
 
 /* Gradient Text */
@@ -272,19 +272,39 @@ h3 {
 /* Responsive Design */
 @media (max-width: 768px) {
   .wrapper {
-    padding: 0 1.5rem;
+    padding: 0 10px;
   }
   
   .padding-section-large {
-    padding: 3rem 1.5rem;
+    padding: 3rem 10px;
   }
   
   .padding-section-medium {
-    padding: 2rem 1.5rem;
+    padding: 2rem 10px;
+  }
+  
+  .padding-section-small {
+    padding: 2rem 10px;
   }
 }
 
 @media (max-width: 480px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  
+  .padding-section-large {
+    padding: 3rem 10px;
+  }
+  
+  .padding-section-medium {
+    padding: 2rem 10px;
+  }
+  
+  .padding-section-small {
+    padding: 2rem 10px;
+  }
+  
   h1 {
     font-size: 2.5rem;
   }
