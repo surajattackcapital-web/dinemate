@@ -3,9 +3,9 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="background-glass mt-12 pt-[50px]">
-      <div className="wrapper pb-16">
+      <div className="wrapper pb-8">
         {/* Top Section with Brand */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12 pb-12 border-b border-gray-200">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-8 pb-8 border-b border-gray-200">
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold gradient-text mb-4">DineMate.ai</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} DineMate.ai. All rights reserved.
           </p>
