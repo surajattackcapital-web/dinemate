@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="wrapper padding-section-large">
+    <div className="wrapper padding-section-large section-bg-purple">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">

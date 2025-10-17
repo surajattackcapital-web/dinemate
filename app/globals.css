@@ -112,16 +112,34 @@ h3 {
 
 /* Glass Effect */
 .background-glass {
-  background: var(--color-glass);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(0.8rem);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .background-glass:hover {
-  background: var(--color-glass-hover);
-  box-shadow: 0 0 30px rgba(128, 9, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Backgrounds */
+.section-bg-light {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.section-bg-purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+}
+
+.section-bg-gray {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.section-bg-blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 
 /* Button */

@@ -87,7 +87,7 @@ export default function Home() {
       {/* =========================== */}
       {/* HERO / MAIN FOLD SECTION */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-purple">
         <div className="wrapper text-center">
           <h1 className="animated-gradient-text mb-6">
             AI Voice Agent for Restaurants - Transform Your Hospitality Operations
@@ -115,7 +115,7 @@ export default function Home() {
       {/* =========================== */}
       {/* SOCIAL PROOF SECTION */}
       {/* =========================== */}
-      <section className="padding-section-medium">
+      <section className="padding-section-medium section-bg-light">
         <div className="wrapper">
           <p className="text-center text-gray-500 mb-8">Trusted by leading restaurants worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
@@ -158,7 +158,7 @@ export default function Home() {
       {/* =========================== */}
       {/* COMPARISON SECTION (OLD WAY VS NEW WAY) */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-gray">
         <div className="wrapper">
           <h2 className="text-center gradient-text mb-12">Why Choose DineMate.ai?</h2>
           
@@ -209,7 +209,7 @@ export default function Home() {
       {/* =========================== */}
       {/* BENEFITS SECTION */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-blue">
         <div className="wrapper">
           <h2 className="text-center gradient-text mb-12">Benefits</h2>
           
@@ -259,7 +259,7 @@ export default function Home() {
       {/* =========================== */}
       {/* HOW IT WORKS SECTION */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-light">
         <div className="wrapper">
           <h2 className="text-center gradient-text mb-12">How It Works</h2>
           
@@ -380,7 +380,7 @@ export default function Home() {
       {/* =========================== */}
       {/* TESTIMONIALS SECTION */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-purple">
         <div className="wrapper">
           <h2 className="text-center gradient-text mb-12">What Our Clients Say</h2>
           
@@ -454,7 +454,7 @@ export default function Home() {
       {/* =========================== */}
       {/* FAQ SECTION */}
       {/* =========================== */}
-      <section className="padding-section-large">
+      <section className="padding-section-large section-bg-gray">
         <div className="wrapper mx-auto" style={{ maxWidth: '800px' }}>
           <h2 className="text-center gradient-text mb-12">Frequently Asked Questions</h2>
           
@@ -545,7 +545,7 @@ export default function Home() {
       {/* =========================== */}
       {/* FINAL CALL-TO-ACTION SECTION */}
       {/* =========================== */}
-      <section className="padding-section-medium">
+      <section className="padding-section-medium section-bg-blue">
         <div className="wrapper">
           <div className="background-glass p-12 md:p-16 rounded-2xl text-center max-w-4xl mx-auto">
             <h2 className="gradient-text mb-6">Ready to Transform Your Restaurant Operations?</h2>
