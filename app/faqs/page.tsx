@@ -49,7 +49,7 @@ export default function FAQs() {
   ];
 
   return (
-    <div className="wrapper padding-section-large">
+    <div className="wrapper padding-section-large section-bg-light">
       <div className="max-w-4xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">

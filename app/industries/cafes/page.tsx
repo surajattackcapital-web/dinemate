@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Cafes() {
   return (
-    <div className="wrapper padding-section-large">
+    <div className="wrapper padding-section-large section-bg-blue">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16">

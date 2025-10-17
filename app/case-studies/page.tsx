@@ -17,7 +17,7 @@ export default async function CaseStudies() {
   const caseStudies = await getAllCaseStudies();
 
   return (
-    <div className="wrapper padding-section-large">
+    <div className="wrapper padding-section-large section-bg-gray">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
         <section className="mb-16 text-center">

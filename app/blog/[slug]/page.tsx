@@ -60,7 +60,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     .slice(0, 3);
 
   return (
-    <div className="wrapper padding-section-large">
+    <div className="wrapper padding-section-large section-bg-light">
       <div className="max-w-4xl mx-auto">
         {/* Back Link */}
         <Link href="/blog" className="text-purple-400 hover:underline mb-8 inline-block">
