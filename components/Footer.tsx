@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} DineMate.ai. All rights reserved.
           </p>
