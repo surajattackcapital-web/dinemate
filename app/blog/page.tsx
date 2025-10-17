@@ -24,7 +24,7 @@ export default async function BlogPage() {
       {/* Header */}
       <section className="text-center mb-16">
         <h1 className="animated-gradient-text mb-6">Restaurant Insights & Best Practices</h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Expert guidance on restaurant management, AI automation, operations optimization, 
           and proven strategies to grow your hospitality business.
         </p>
@@ -50,12 +50,12 @@ export default async function BlogPage() {
                   <div className="flex gap-3 mb-4">
                     <span className="text-purple-400 text-sm">{posts[0].category}</span>
                     <span className="text-gray-500">•</span>
-                    <span className="text-gray-400 text-sm">{posts[0].readTime} read</span>
+                    <span className="text-gray-500 text-sm">{posts[0].readTime} read</span>
                   </div>
                   <h2 className="text-3xl font-bold gradient-text mb-4">{posts[0].title}</h2>
-                  <p className="text-gray-300 mb-6">{posts[0].description}</p>
+                  <p className="text-gray-600 mb-6">{posts[0].description}</p>
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-500">
                       <span className="block">By {posts[0].author}</span>
                       <span className="block">{new Date(posts[0].date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                     </div>
@@ -86,11 +86,11 @@ export default async function BlogPage() {
                   <div className="flex gap-3 mb-3">
                     <span className="text-purple-400 text-sm">{post.category}</span>
                     <span className="text-gray-500">•</span>
-                    <span className="text-gray-400 text-sm">{post.readTime} read</span>
+                    <span className="text-gray-500 text-sm">{post.readTime} read</span>
                   </div>
                   <h3 className="text-xl font-bold gradient-text mb-3 flex-1">{post.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">{post.description}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">{post.description}</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span className="text-xs text-gray-500">
                       {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                     </span>
@@ -107,7 +107,7 @@ export default async function BlogPage() {
       <section className="mt-20">
         <div className="background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text text-3xl mb-4">Stay Updated</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Get the latest restaurant management insights, AI automation tips, and industry best practices delivered to your inbox.
           </p>
           <Link href="/contact" className="button text-lg">
@@ -119,7 +119,7 @@ export default async function BlogPage() {
       {/* Categories */}
       {categories.length > 0 && (
         <section className="mt-16">
-          <h3 className="text-xl font-semibold mb-4 text-center text-gray-300">Browse by Category</h3>
+          <h3 className="text-xl font-semibold mb-4 text-center text-gray-600">Browse by Category</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <span 

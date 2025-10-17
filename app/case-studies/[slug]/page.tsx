@@ -75,7 +75,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
               <div>
                 <p className="text-purple-300 text-sm mb-1 font-medium">{study.industry}</p>
                 {study.location && (
-                  <p className="text-gray-200 text-sm">📍 {study.location}</p>
+                  <p className="text-gray-700 text-sm">📍 {study.location}</p>
                 )}
           </div>
         </div>
@@ -84,13 +84,13 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             <h1 className="animated-gradient-text mb-6" style={{ fontSize: '3rem', lineHeight: '1.2' }}>{study.title}</h1>
 
             {/* Description */}
-            <p className="text-xl text-gray-200 mb-8">{study.description}</p>
+            <p className="text-xl text-gray-700 mb-8">{study.description}</p>
 
         {/* Key Metrics */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="background-glass p-6 rounded-xl">
-                <p className="text-sm text-gray-300 mb-2 font-semibold">Challenge</p>
-                <p className="text-gray-100">{study.challenge}</p>
+                <p className="text-sm text-gray-600 mb-2 font-semibold">Challenge</p>
+                <p className="text-gray-800">{study.challenge}</p>
               </div>
               <div className="background-glass p-6 rounded-xl">
                 <p className="text-sm text-purple-300 mb-2 font-semibold">Solution</p>
@@ -103,7 +103,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             </div>
 
             {/* Meta */}
-            <div className="flex flex-wrap gap-6 text-gray-300 text-sm border-t border-b border-gray-800 py-6">
+            <div className="flex flex-wrap gap-6 text-gray-600 text-sm border-t border-b border-gray-200 py-6">
               {study.author && (
                 <div>
                   <span className="text-purple-300 font-semibold">By:</span> {study.author}
@@ -143,12 +143,12 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           {/* Tags */}
           {study.tags && study.tags.length > 0 && (
             <div className="mb-12">
-              <h3 className="text-gray-300 text-sm mb-4 font-semibold">Tags:</h3>
+              <h3 className="text-gray-600 text-sm mb-4 font-semibold">Tags:</h3>
               <div className="flex flex-wrap gap-2">
                 {study.tags.map((tag, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-200 text-sm"
+                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-700 text-sm"
                   >
                     {tag}
                   </span>
@@ -161,7 +161,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         {/* CTA */}
         <div className="background-glass p-12 rounded-2xl text-center mb-16">
           <h2 className="gradient-text text-3xl mb-4">Ready for Similar Results?</h2>
-          <p className="text-gray-200 mb-6 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto text-lg">
             See how DineMate.ai can transform your restaurant operations like we did for {study.company}
           </p>
           <Link href="/contact" className="button text-lg">
@@ -191,7 +191,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
                     <div className="text-5xl mb-3 text-center">{getIndustryEmoji(relatedStudy.industry)}</div>
                     <h3 className="text-2xl font-bold gradient-text mb-2">{relatedStudy.company}</h3>
                     <p className="text-purple-300 mb-4 font-medium">{relatedStudy.industry}</p>
-                    <p className="text-gray-200 mb-3 line-clamp-2">{relatedStudy.description}</p>
+                    <p className="text-gray-700 mb-3 line-clamp-2">{relatedStudy.description}</p>
                     <p className="text-green-300 font-semibold">{relatedStudy.results}</p>
                   </div>
                 </Link>
@@ -203,7 +203,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         {/* Article Styles */}
         <style dangerouslySetInnerHTML={{ __html: `
           .case-study-content {
-            color: #e5e7eb;
+            color: #374151;
             line-height: 1.8;
           }
           
@@ -211,7 +211,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           .case-study-content h2,
           .case-study-content h3,
           .case-study-content h4 {
-            color: #ffffff;
+            color: #1f2937;
             font-weight: bold;
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
@@ -242,14 +242,14 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           
           .case-study-content p {
             margin-bottom: 1.5rem;
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .case-study-content ul,
           .case-study-content ol {
             margin-bottom: 1.5rem;
             padding-left: 1.75rem;
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .case-study-content li {
@@ -258,7 +258,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           }
           
           .case-study-content strong {
-            color: #f9fafb;
+            color: #1f2937;
             font-weight: 600;
           }
           
@@ -275,7 +275,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             border-left: 4px solid #8009FF;
             padding-left: 1.5rem;
             margin: 2rem 0;
-            color: #d1d5db;
+            color: #4b5563;
             font-style: italic;
           }
           
@@ -289,7 +289,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           }
           
           .case-study-content pre {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(139, 92, 246, 0.2);
             padding: 1.5rem;
             border-radius: 0.75rem;
@@ -316,18 +316,18 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           }
           
           .case-study-content table th {
-            background: rgba(139, 92, 246, 0.3);
-            color: #f9fafb;
+            background: rgba(139, 92, 246, 0.1);
+            color: #1f2937;
             font-weight: 600;
           }
           
           /* Ensure table body text is always visible */
           .case-study-content table td {
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .case-study-content table tr:nth-child(even) {
-            background: rgba(139, 92, 246, 0.05);
+            background: rgba(139, 92, 246, 0.02);
           }
           
           .case-study-content img {
@@ -377,7 +377,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             color: #1f2937 !important;
           }
           
-          /* Keep table headers with white text */
+          /* Keep table headers with dark text */
           .case-study-content table th,
           .case-study-content table th *,
           .case-study-content table thead th,
@@ -386,7 +386,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           .case-study-content div[style*="background"] table th *,
           .case-study-content div[style*="background"] table thead th,
           .case-study-content div[style*="background"] table thead th * {
-            color: white !important;
+            color: #1f2937 !important;
           }
         `}} />
       </div>

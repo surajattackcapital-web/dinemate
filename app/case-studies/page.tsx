@@ -22,7 +22,7 @@ export default async function CaseStudies() {
         {/* Hero */}
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Success Stories</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from restaurants and hospitality businesses transforming their operations with DineMate.ai
           </p>
         </section>
@@ -47,14 +47,14 @@ export default async function CaseStudies() {
                     <div className="text-6xl mb-4">{getIndustryEmoji(caseStudies[0].industry)}</div>
                     <p className="text-purple-400 mb-2">{caseStudies[0].industry}</p>
                     <h2 className="text-3xl font-bold gradient-text mb-4">{caseStudies[0].company}</h2>
-                    <p className="text-gray-300 mb-6">{caseStudies[0].description}</p>
+                    <p className="text-gray-600 mb-6">{caseStudies[0].description}</p>
                     <div className="space-y-3 mb-6">
                       <div>
-                        <p className="text-sm text-gray-400 mb-1">Challenge:</p>
-                        <p className="text-gray-300">{caseStudies[0].challenge}</p>
+                        <p className="text-sm text-gray-500 mb-1">Challenge:</p>
+                        <p className="text-gray-600">{caseStudies[0].challenge}</p>
                       </div>
                       <div>
-                        <p className="text-sm text-gray-400 mb-1">Results:</p>
+                        <p className="text-sm text-gray-500 mb-1">Results:</p>
                         <p className="text-green-400 font-semibold text-lg">{caseStudies[0].results}</p>
                       </div>
                     </div>
@@ -87,7 +87,7 @@ export default async function CaseStudies() {
                   <div className="space-y-2 mb-4">
                     <div>
                       <p className="text-xs text-gray-500 mb-1">Challenge:</p>
-                      <p className="text-sm text-gray-300 line-clamp-2">{study.challenge}</p>
+                      <p className="text-sm text-gray-600 line-clamp-2">{study.challenge}</p>
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 mb-1">Results:</p>
@@ -95,7 +95,7 @@ export default async function CaseStudies() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span className="text-xs text-gray-500">{study.readTime}</span>
                     <span className="text-purple-400 text-sm hover:text-purple-300">Read More →</span>
                   </div>
@@ -111,26 +111,26 @@ export default async function CaseStudies() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-5xl font-bold gradient-text mb-2">500+</div>
-              <p className="text-gray-300">Restaurants Served</p>
+              <p className="text-gray-600">Restaurants Served</p>
             </div>
             <div>
               <div className="text-5xl font-bold gradient-text mb-2">$50M+</div>
-              <p className="text-gray-300">Revenue Generated</p>
+              <p className="text-gray-600">Revenue Generated</p>
             </div>
             <div>
               <div className="text-5xl font-bold gradient-text mb-2">10M+</div>
-              <p className="text-gray-300">Orders Processed</p>
+              <p className="text-gray-600">Orders Processed</p>
             </div>
             <div>
               <div className="text-5xl font-bold gradient-text mb-2">98%</div>
-              <p className="text-gray-300">Customer Satisfaction</p>
+              <p className="text-gray-600">Customer Satisfaction</p>
             </div>
           </div>
         </section>
 
         {/* Industries Section */}
         <section className="mb-16">
-          <h3 className="text-xl font-semibold mb-4 text-center text-gray-300">Industries We Serve</h3>
+          <h3 className="text-xl font-semibold mb-4 text-center text-gray-600">Industries We Serve</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {Array.from(new Set(caseStudies.map(cs => cs.industry))).map((industry) => (
               <span 
@@ -148,7 +148,7 @@ export default async function CaseStudies() {
         <section className="text-center">
           <div className="background-glass p-12 rounded-2xl">
             <h2 className="gradient-text text-3xl mb-4">Ready to Write Your Success Story?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join hundreds of hospitality businesses achieving remarkable results with AI automation
             </p>
             <Link href="/contact" className="button text-lg">

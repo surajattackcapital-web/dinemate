@@ -75,17 +75,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <span className="px-4 py-1 bg-purple-900/40 border border-purple-500/40 rounded-full text-purple-200 text-sm font-medium">
                 {post.category}
               </span>
-              <span className="text-gray-300 text-sm">{post.readTime} read</span>
+              <span className="text-gray-600 text-sm">{post.readTime} read</span>
             </div>
 
             {/* Title */}
             <h1 className="animated-gradient-text mb-6" style={{ fontSize: '3rem', lineHeight: '1.2' }}>{post.title}</h1>
 
             {/* Description */}
-            <p className="text-xl text-gray-200 mb-8">{post.description}</p>
+            <p className="text-xl text-gray-700 mb-8">{post.description}</p>
 
             {/* Meta */}
-            <div className="flex flex-wrap gap-6 text-gray-300 text-sm border-t border-b border-gray-800 py-6">
+            <div className="flex flex-wrap gap-6 text-gray-600 text-sm border-t border-b border-gray-200 py-6">
               {post.author && (
                 <div>
                   <span className="text-purple-300 font-semibold">Author:</span> {post.author}
@@ -122,12 +122,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
             <div className="mb-12">
-              <h3 className="text-gray-300 text-sm mb-4 font-semibold">Tags:</h3>
+              <h3 className="text-gray-600 text-sm mb-4 font-semibold">Tags:</h3>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag, index) => (
                   <span 
                     key={index}
-                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-200 text-sm"
+                    className="px-4 py-1 bg-gray-800 border border-gray-600 rounded-full text-gray-700 text-sm"
                   >
                     {tag}
                   </span>
@@ -140,7 +140,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {/* CTA Section */}
         <div className="background-glass p-12 rounded-2xl text-center mb-16">
           <h2 className="gradient-text text-3xl mb-4">Ready to Transform Your Restaurant?</h2>
-          <p className="text-gray-200 mb-6 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto text-lg">
             Discover how DineMate.ai can help you implement these strategies with cutting-edge AI automation
           </p>
           <Link href="/contact" className="button text-lg">
@@ -169,7 +169,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     </div>
                     <span className="text-purple-300 text-sm mb-2 font-medium">{relatedPost.category}</span>
                     <h3 className="text-lg font-bold gradient-text mb-2 flex-1">{relatedPost.title}</h3>
-                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">{relatedPost.description}</p>
+                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">{relatedPost.description}</p>
                     <span className="text-purple-300 text-sm hover:text-purple-200">Read More →</span>
                   </div>
                 </Link>
@@ -181,7 +181,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         {/* Article Styles */}
         <style dangerouslySetInnerHTML={{ __html: `
           .blog-content {
-            color: #e5e7eb;
+            color: #374151;
             line-height: 1.8;
           }
           
@@ -189,7 +189,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           .blog-content h2,
           .blog-content h3,
           .blog-content h4 {
-            color: #ffffff;
+            color: #1f2937;
             font-weight: bold;
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
@@ -220,14 +220,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           
           .blog-content p {
             margin-bottom: 1.5rem;
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .blog-content ul,
           .blog-content ol {
             margin-bottom: 1.5rem;
             padding-left: 1.75rem;
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .blog-content li {
@@ -236,7 +236,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           }
           
           .blog-content strong {
-            color: #f9fafb;
+            color: #1f2937;
             font-weight: 600;
           }
           
@@ -253,7 +253,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             border-left: 4px solid #8009FF;
             padding-left: 1.5rem;
             margin: 2rem 0;
-            color: #d1d5db;
+            color: #4b5563;
             font-style: italic;
           }
           
@@ -267,7 +267,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           }
           
           .blog-content pre {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(139, 92, 246, 0.2);
             padding: 1.5rem;
             border-radius: 0.75rem;
@@ -294,18 +294,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           }
           
           .blog-content table th {
-            background: rgba(139, 92, 246, 0.3);
-            color: #f9fafb;
+            background: rgba(139, 92, 246, 0.1);
+            color: #1f2937;
             font-weight: 600;
           }
           
           /* Ensure table body text is always visible */
           .blog-content table td {
-            color: #e5e7eb;
+            color: #374151;
           }
           
           .blog-content table tr:nth-child(even) {
-            background: rgba(139, 92, 246, 0.05);
+            background: rgba(139, 92, 246, 0.02);
           }
           
           .blog-content img {
@@ -354,7 +354,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             color: #1f2937 !important;
           }
           
-          /* Keep table headers with white text */
+          /* Keep table headers with dark text */
           .blog-content table th,
           .blog-content table th *,
           .blog-content table thead th,
@@ -363,7 +363,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           .blog-content div[style*="background"] table th *,
           .blog-content div[style*="background"] table thead th,
           .blog-content div[style*="background"] table thead th * {
-            color: white !important;
+            color: #1f2937 !important;
           }
         `}} />
       </div>
