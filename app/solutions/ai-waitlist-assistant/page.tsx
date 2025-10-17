@@ -17,7 +17,7 @@ export default function AIWaitlistAssistant() {
         {/* Hero */}
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Waitlist Assistant</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our ai voice agent for restaurants reduces no-shows, manages guests automatically, and optimizes your restaurant flow with intelligent waitlist management
           </p>
         </section>
@@ -26,10 +26,10 @@ export default function AIWaitlistAssistant() {
         <section className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="gradient-text text-3xl mb-6">Smart Guest Management</h2>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-600 mb-4">
               Our ai voice agent for restaurants revolutionizes how you manage guest flow. Automatically notify guests via SMS when their table is ready, track wait times in real-time, and reduce no-shows by up to 40%.
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Integrate seamlessly with your existing POS and reservation systems for a unified guest experience.
             </p>
             <Link href="/contact" className="button">
@@ -52,17 +52,17 @@ export default function AIWaitlistAssistant() {
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">⏱️</div>
               <h3 className="font-bold text-xl mb-3">Real-Time Updates</h3>
-              <p className="text-gray-300">Automatic SMS notifications keep guests informed</p>
+              <p className="text-gray-600">Automatic SMS notifications keep guests informed</p>
             </div>
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="font-bold text-xl mb-3">Analytics Dashboard</h3>
-              <p className="text-gray-300">Track wait times, no-shows, and peak hours</p>
+              <p className="text-gray-600">Track wait times, no-shows, and peak hours</p>
             </div>
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="font-bold text-xl mb-3">Seamless Integration</h3>
-              <p className="text-gray-300">Works with your existing restaurant systems</p>
+              <p className="text-gray-600">Works with your existing restaurant systems</p>
             </div>
           </div>
         </section>
@@ -73,10 +73,10 @@ export default function AIWaitlistAssistant() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-2xl mb-4">Reduce No-Shows by 40%</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 Smart automated reminders and confirmation requests ensure guests show up for their reserved time. Our ai voice agent for restaurants and AI waitlist management system sends timely SMS and email notifications, dramatically reducing no-show rates and improving table turnover.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-600 space-y-2">
                 <li>• Automated SMS reminders before table time</li>
                 <li>• Two-way communication for confirmations</li>
                 <li>• Smart rescheduling options</li>
@@ -85,10 +85,10 @@ export default function AIWaitlistAssistant() {
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-2xl mb-4">Optimize Wait Times</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 Real-time queue management powered by AI ensures efficient guest flow during peak hours. Predict accurate wait times based on historical data and current kitchen capacity, keeping guests informed and satisfied.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-600 space-y-2">
                 <li>• AI-powered wait time predictions</li>
                 <li>• Dynamic queue prioritization</li>
                 <li>• Capacity-based seating optimization</li>
@@ -105,17 +105,17 @@ export default function AIWaitlistAssistant() {
             <div className="text-center">
               <div className="text-5xl font-bold gradient-text mb-4">1</div>
               <h3 className="font-bold text-xl mb-3">Guest Check-In</h3>
-              <p className="text-gray-300">Guests join the waitlist via phone, web, or in-person. AI captures party size, preferences, and contact information automatically.</p>
+              <p className="text-gray-600">Guests join the waitlist via phone, web, or in-person. AI captures party size, preferences, and contact information automatically.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold gradient-text mb-4">2</div>
               <h3 className="font-bold text-xl mb-3">Smart Queue Management</h3>
-              <p className="text-gray-300">Our AI monitors table availability, estimates wait times, and manages the queue based on party size and seating capacity.</p>
+              <p className="text-gray-600">Our AI monitors table availability, estimates wait times, and manages the queue based on party size and seating capacity.</p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold gradient-text mb-4">3</div>
               <h3 className="font-bold text-xl mb-3">Automatic Notifications</h3>
-              <p className="text-gray-300">When tables are ready, guests receive instant SMS alerts with check-in instructions and wait time updates.</p>
+              <p className="text-gray-600">When tables are ready, guests receive instant SMS alerts with check-in instructions and wait time updates.</p>
             </div>
           </div>
         </section>
@@ -126,15 +126,15 @@ export default function AIWaitlistAssistant() {
           <div className="space-y-4">
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">High-Volume Restaurants</h3>
-              <p className="text-gray-300">Handle 100+ guests during peak hours with automated waitlist management that scales effortlessly. Free up your host staff to focus on greeting and seating guests.</p>
+              <p className="text-gray-600">Handle 100+ guests during peak hours with automated waitlist management that scales effortlessly. Free up your host staff to focus on greeting and seating guests.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Weekend Brunch Spots</h3>
-              <p className="text-gray-300">Manage long weekend waits with transparent communication. Guests can check their position remotely and arrive exactly when their table is ready.</p>
+              <p className="text-gray-600">Manage long weekend waits with transparent communication. Guests can check their position remotely and arrive exactly when their table is ready.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Special Events & Private Dining</h3>
-              <p className="text-gray-300">Coordinate special event waitlists with custom notifications, VIP priority handling, and seamless integration with your reservation system.</p>
+              <p className="text-gray-600">Coordinate special event waitlists with custom notifications, VIP priority handling, and seamless integration with your reservation system.</p>
             </div>
           </div>
         </section>
@@ -145,19 +145,19 @@ export default function AIWaitlistAssistant() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">40%</div>
-              <p className="text-gray-300">Reduction in no-shows</p>
+              <p className="text-gray-600">Reduction in no-shows</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">60%</div>
-              <p className="text-gray-300">Less staff time spent</p>
+              <p className="text-gray-600">Less staff time spent</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">95%</div>
-              <p className="text-gray-300">Guest satisfaction rate</p>
+              <p className="text-gray-600">Guest satisfaction rate</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-              <p className="text-gray-300">Automated operations</p>
+              <p className="text-gray-600">Automated operations</p>
             </div>
           </div>
         </section>
@@ -165,7 +165,7 @@ export default function AIWaitlistAssistant() {
         {/* CTA */}
         <section className="background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text mb-4">Ready to Optimize Your Waitlist?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Join leading restaurants using AI to reduce wait times and enhance guest satisfaction
           </p>
           <Link href="/contact" className="button">

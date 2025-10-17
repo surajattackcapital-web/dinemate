@@ -56,7 +56,7 @@ export default function Careers() {
         {/* Hero */}
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Join Our AI Voice Agent for Restaurants Team</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Help us build our ai voice agent for restaurants that transforms how millions of people experience hospitality
           </p>
         </section>
@@ -69,42 +69,42 @@ export default function Careers() {
               <span className="text-4xl">🚀</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Cutting-Edge AI</h3>
-                <p className="text-gray-300">Work with the latest in NLP, our ai voice agent for restaurants, and machine learning</p>
+                <p className="text-gray-600">Work with the latest in NLP, our ai voice agent for restaurants, and machine learning</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl">💰</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Competitive Compensation</h3>
-                <p className="text-gray-300">Salary, equity, and comprehensive benefits package</p>
+                <p className="text-gray-600">Salary, equity, and comprehensive benefits package</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl">🌍</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Remote-First Culture</h3>
-                <p className="text-gray-300">Work from anywhere with flexible hours</p>
+                <p className="text-gray-600">Work from anywhere with flexible hours</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl">📈</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Growth Opportunities</h3>
-                <p className="text-gray-300">Learn, grow, and advance your career rapidly</p>
+                <p className="text-gray-600">Learn, grow, and advance your career rapidly</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl">🏥</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Health & Wellness</h3>
-                <p className="text-gray-300">Premium health insurance and wellness benefits</p>
+                <p className="text-gray-600">Premium health insurance and wellness benefits</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl">🎓</span>
               <div>
                 <h3 className="font-bold text-xl mb-2">Learning Budget</h3>
-                <p className="text-gray-300">Continuous learning with courses and conferences</p>
+                <p className="text-gray-600">Continuous learning with courses and conferences</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Careers() {
               </div>
               <div className="background-glass p-6 rounded-lg flex-grow">
                 <h3 className="font-bold text-xl mb-2">2022 - Founded</h3>
-                <p className="text-gray-300">Started with a vision to revolutionize hospitality with our ai voice agent for restaurants</p>
+                <p className="text-gray-600">Started with a vision to revolutionize hospitality with our ai voice agent for restaurants</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -129,7 +129,7 @@ export default function Careers() {
               </div>
               <div className="background-glass p-6 rounded-lg flex-grow">
                 <h3 className="font-bold text-xl mb-2">2023 - First 100 Customers</h3>
-                <p className="text-gray-300">Rapid growth across restaurants, cafes, and hotels</p>
+                <p className="text-gray-600">Rapid growth across restaurants, cafes, and hotels</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -138,7 +138,7 @@ export default function Careers() {
               </div>
               <div className="background-glass p-6 rounded-lg flex-grow">
                 <h3 className="font-bold text-xl mb-2">2024 - Series A Funding</h3>
-                <p className="text-gray-300">Raised funding to accelerate product development and expansion</p>
+                <p className="text-gray-600">Raised funding to accelerate product development and expansion</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -147,7 +147,7 @@ export default function Careers() {
               </div>
               <div className="background-glass p-6 rounded-lg flex-grow">
                 <h3 className="font-bold text-xl mb-2">2025 - Global Expansion</h3>
-                <p className="text-gray-300">Serving customers in 20+ countries with 50+ team members</p>
+                <p className="text-gray-600">Serving customers in 20+ countries with 50+ team members</p>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Careers() {
               <div key={index} className="background-glass p-6 rounded-lg flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <h3 className="font-bold text-xl mb-2">{position.title}</h3>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                     <span>📂 {position.department}</span>
                     <span>📍 {position.location}</span>
                     <span>⏰ {position.type}</span>
@@ -178,7 +178,7 @@ export default function Careers() {
         {/* CTA */}
         <section className="background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text mb-4">Don't See Your Role?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             We're always looking for exceptional talent. Send us your resume and tell us what makes you special.
           </p>
           <Link href="/contact" className="button">

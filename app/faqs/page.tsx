@@ -54,7 +54,7 @@ export default function FAQs() {
         {/* Hero */}
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Frequently Asked Questions - AI Voice Agent for Restaurants</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Everything you need to know about our ai voice agent for restaurants
           </p>
         </section>
@@ -65,7 +65,7 @@ export default function FAQs() {
             <div key={index} className="background-glass rounded-lg overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <h3 className="text-xl font-semibold pr-4">{faq.question}</h3>
                 <span className="text-3xl text-purple-400 flex-shrink-0">
@@ -73,7 +73,7 @@ export default function FAQs() {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-300">
+                <div className="px-6 pb-6 text-gray-600">
                   <p>{faq.answer}</p>
                 </div>
               )}
@@ -84,7 +84,7 @@ export default function FAQs() {
         {/* Still Have Questions */}
         <section className="background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text text-3xl mb-4">Still Have Questions?</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-600 mb-6">
             Our team is here to help. Schedule a call or send us a message.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

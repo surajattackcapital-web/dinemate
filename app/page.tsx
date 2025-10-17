@@ -463,7 +463,7 @@ export default function Home() {
             <div className="background-glass rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(1)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <span className="text-lg font-semibold">How long does it take to set up DineMate.ai?</span>
                 <span className="text-2xl">{openFaq === 1 ? '−' : '+'}</span>
@@ -479,7 +479,7 @@ export default function Home() {
             <div className="background-glass rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(2)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <span className="text-lg font-semibold">Does DineMate.ai work with my existing POS system?</span>
                 <span className="text-2xl">{openFaq === 2 ? '−' : '+'}</span>
@@ -495,7 +495,7 @@ export default function Home() {
             <div className="background-glass rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(3)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <span className="text-lg font-semibold">What if guests prefer to speak with a human?</span>
                 <span className="text-2xl">{openFaq === 3 ? '−' : '+'}</span>
@@ -511,7 +511,7 @@ export default function Home() {
             <div className="background-glass rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(4)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <span className="text-lg font-semibold">Can I customize the AI's responses?</span>
                 <span className="text-2xl">{openFaq === 4 ? '−' : '+'}</span>
@@ -527,7 +527,7 @@ export default function Home() {
             <div className="background-glass rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(5)}
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition"
+                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
                 <span className="text-lg font-semibold">What kind of support do you offer?</span>
                 <span className="text-2xl">{openFaq === 5 ? '−' : '+'}</span>

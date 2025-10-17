@@ -18,7 +18,7 @@ export default function Hotels() {
         <section className="mb-16">
           <div className="text-center">
             <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Hotel Solutions</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Room service automation and concierge support powered by our ai voice agent for restaurants
             </p>
             <Link href="/contact" className="button text-lg inline-block mb-12">
@@ -39,7 +39,7 @@ export default function Hotels() {
         <section className="mb-16">
           <div className="background-glass p-8 rounded-lg mb-8">
             <h2 className="gradient-text text-3xl mb-6">Elevate Hotel Dining</h2>
-            <p className="text-gray-300">
+            <p className="text-gray-600">
               Provide 24/7 room service ordering, restaurant reservations, and dining recommendations with our ai voice agent for restaurants - AI-powered assistance that never sleeps.
             </p>
           </div>
@@ -48,17 +48,17 @@ export default function Hotels() {
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">🍽️</div>
               <h3 className="font-bold text-xl mb-3">Room Service</h3>
-              <p className="text-gray-300">24/7 AI ordering via phone or app</p>
+              <p className="text-gray-600">24/7 AI ordering via phone or app</p>
             </div>
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">🎩</div>
               <h3 className="font-bold text-xl mb-3">Concierge Support</h3>
-              <p className="text-gray-300">Restaurant recommendations and bookings</p>
+              <p className="text-gray-600">Restaurant recommendations and bookings</p>
             </div>
             <div className="service-card background-glass">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="font-bold text-xl mb-3">Multi-Language</h3>
-              <p className="text-gray-300">Serve international guests seamlessly</p>
+              <p className="text-gray-600">Serve international guests seamlessly</p>
             </div>
           </div>
         </section>
@@ -69,10 +69,10 @@ export default function Hotels() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="font-bold text-2xl mb-4">24/7 Room Service Excellence</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 Never miss a room service order again. Our ai voice agent for restaurants takes orders 24/7 in multiple languages, handles special dietary requests, and coordinates with your kitchen staff for timely delivery to guest rooms.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-600 space-y-2">
                 <li>• 24/7 order taking in 100+ languages</li>
                 <li>• Automatic room charge integration</li>
                 <li>• Special request handling</li>
@@ -81,10 +81,10 @@ export default function Hotels() {
             </div>
             <div>
               <h3 className="font-bold text-2xl mb-4">Revenue Optimization</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 Increase F&B revenue per occupied room with smart upselling, restaurant promotions, and seamless booking for hotel restaurants. Turn every guest interaction into a revenue opportunity.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-600 space-y-2">
                 <li>• 30% increase in F&B revenue per room</li>
                 <li>• Automated restaurant reservations</li>
                 <li>• Elite guest recognition and perks</li>
@@ -100,15 +100,15 @@ export default function Hotels() {
           <div className="space-y-4">
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Luxury Hotels & Resorts</h3>
-              <p className="text-gray-300">Maintain white-glove service standards with AI that handles guest requests efficiently while staff focuses on personalized touches and exceptional experiences.</p>
+              <p className="text-gray-600">Maintain white-glove service standards with AI that handles guest requests efficiently while staff focuses on personalized touches and exceptional experiences.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Business Hotels</h3>
-              <p className="text-gray-300">Cater to business travelers who need fast, efficient service. AI handles quick breakfast orders, meeting catering, and dinner reservations without delay.</p>
+              <p className="text-gray-600">Cater to business travelers who need fast, efficient service. AI handles quick breakfast orders, meeting catering, and dinner reservations without delay.</p>
             </div>
             <div className="background-glass p-6 rounded-lg">
               <h3 className="font-bold text-xl mb-2">Boutique Properties</h3>
-              <p className="text-gray-300">Deliver personalized service at scale. AI remembers guest preferences and provides consistent, memorable experiences that build loyalty.</p>
+              <p className="text-gray-600">Deliver personalized service at scale. AI remembers guest preferences and provides consistent, memorable experiences that build loyalty.</p>
             </div>
           </div>
         </section>
@@ -119,19 +119,19 @@ export default function Hotels() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">100+</div>
-              <p className="text-gray-300">Hotel properties served</p>
+              <p className="text-gray-600">Hotel properties served</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">30%</div>
-              <p className="text-gray-300">F&B revenue increase</p>
+              <p className="text-gray-600">F&B revenue increase</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">95%</div>
-              <p className="text-gray-300">Guest satisfaction score</p>
+              <p className="text-gray-600">Guest satisfaction score</p>
             </div>
             <div>
               <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-              <p className="text-gray-300">Multilingual support</p>
+              <p className="text-gray-600">Multilingual support</p>
             </div>
           </div>
         </section>
@@ -139,7 +139,7 @@ export default function Hotels() {
         {/* CTA */}
         <section className="background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text mb-4">Modernize Hotel Dining</h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-600 mb-6">
             Enhance guest satisfaction with AI-powered hospitality
           </p>
           <Link href="/contact" className="button">

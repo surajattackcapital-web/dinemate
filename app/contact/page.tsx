@@ -32,7 +32,7 @@ export default function Contact() {
         {/* Hero */}
         <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Get in Touch - AI Voice Agent for Restaurants</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your hospitality operations with our ai voice agent for restaurants? Let's talk about how DineMate.ai can help.
           </p>
         </section>
@@ -53,7 +53,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition"
                   placeholder="John Doe"
                 />
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition"
                   placeholder="john@example.com"
                 />
               </div>
@@ -85,7 +85,7 @@ export default function Contact() {
                   required
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition"
                   placeholder="Your Restaurant"
                 />
               </div>
@@ -100,7 +100,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -115,7 +115,7 @@ export default function Contact() {
                   required
                   value={formData.businessType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition"
                 >
                   <option value="">Select one...</option>
                   <option value="restaurant">Restaurant</option>
@@ -137,7 +137,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-500 transition resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition resize-none"
                   placeholder="Tell us about your needs..."
                 ></textarea>
               </div>
@@ -177,7 +177,7 @@ export default function Contact() {
                   <span className="text-3xl">📍</span>
                   <div>
                     <h3 className="font-bold mb-1">Office</h3>
-                    <p className="text-gray-300">
+                    <p className="text-gray-600">
                       123 Innovation Drive<br />
                       San Francisco, CA 94102<br />
                       United States
@@ -189,7 +189,7 @@ export default function Contact() {
                   <span className="text-3xl">⏰</span>
                   <div>
                     <h3 className="font-bold mb-1">Business Hours</h3>
-                    <p className="text-gray-300">
+                    <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 6:00 PM PST<br />
                       Saturday - Sunday: Closed
                     </p>
@@ -200,10 +200,10 @@ export default function Contact() {
 
             <div className="background-glass p-8 rounded-lg">
               <h3 className="gradient-text text-xl mb-4">Quick Response Time</h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 We typically respond to all inquiries about our ai voice agent for restaurants within 24 hours during business days.
               </p>
-              <p className="text-gray-300">
+              <p className="text-gray-600">
                 For urgent matters, please call us directly at <a href="tel:+15551234567" className="text-purple-400 hover:underline">+1 (555) 123-4567</a>
               </p>
             </div>
