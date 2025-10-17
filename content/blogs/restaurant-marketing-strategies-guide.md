@@ -675,3 +675,5 @@ Now get out there and fill those tables.
 *Ready to transform your restaurant marketing? Pick 3 strategies from this guide. Implement them fully over the next 90 days. Track your results. Adjust. Repeat.*
 
 
+
+

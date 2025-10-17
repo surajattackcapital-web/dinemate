@@ -92,7 +92,7 @@ export default function Home() {
           <h1 className="animated-gradient-text mb-6">
             AI Voice Agent for Restaurants - Transform Your Hospitality Operations
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Transform your restaurant operations with our advanced ai voice agent for restaurants - intelligent AI assistants for waitlists, ordering, reservations, and customer feedback available 24/7
           </p>
           <Link href="/contact" className="button text-lg mb-12 inline-block">
@@ -117,38 +117,38 @@ export default function Home() {
       {/* =========================== */}
       <section className="padding-section-medium">
         <div className="wrapper">
-          <p className="text-center text-gray-400 mb-8">Trusted by leading restaurants worldwide</p>
+          <p className="text-center text-gray-500 mb-8">Trusted by leading restaurants worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {/* Brand Logo Placeholder 1 */}
-            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>
+            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(0, 0, 0, 0.05)' }}>
               <img 
                 src="/img/logoipsum.svg" 
                 alt="Brand Logo 1" 
-                className="max-w-[160px] max-h-[80px] object-contain brightness-125 hover:brightness-150 transition"
+                className="max-w-[160px] max-h-[80px] object-contain opacity-60 hover:opacity-80 transition"
               />
             </div>
             {/* Brand Logo Placeholder 2 */}
-            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>
+            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(0, 0, 0, 0.05)' }}>
               <img 
                 src="/img/logoipsum.svg" 
                 alt="Brand Logo 2" 
-                className="max-w-[160px] max-h-[80px] object-contain brightness-125 hover:brightness-150 transition"
+                className="max-w-[160px] max-h-[80px] object-contain opacity-60 hover:opacity-80 transition"
               />
             </div>
             {/* Brand Logo Placeholder 3 */}
-            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>
+            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(0, 0, 0, 0.05)' }}>
               <img 
                 src="/img/logoipsum.svg" 
                 alt="Brand Logo 3" 
-                className="max-w-[160px] max-h-[80px] object-contain brightness-125 hover:brightness-150 transition"
+                className="max-w-[160px] max-h-[80px] object-contain opacity-60 hover:opacity-80 transition"
               />
             </div>
             {/* Brand Logo Placeholder 4 */}
-            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(255, 255, 255, 0.12)' }}>
+            <div className="rounded-lg px-12 py-8 flex items-center justify-center min-w-[150px] h-[130px]" style={{ background: 'rgba(0, 0, 0, 0.05)' }}>
               <img 
                 src="/img/logoipsum.svg" 
                 alt="Brand Logo 4" 
-                className="max-w-[160px] max-h-[80px] object-contain brightness-125 hover:brightness-150 transition"
+                className="max-w-[160px] max-h-[80px] object-contain opacity-60 hover:opacity-80 transition"
               />
             </div>
           </div>
@@ -166,19 +166,19 @@ export default function Home() {
             {/* Old Way Column */}
             <div className="background-glass p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">❌ Old Way</h3>
-              <p className="text-gray-300 mb-6">Manual processes that slow you down</p>
+              <p className="text-gray-600 mb-6">Manual processes that slow you down</p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">•</span>
-                  <span className="text-gray-300">Staff overwhelmed managing calls and walk-ins during peak hours</span>
+                  <span className="text-gray-600">Staff overwhelmed managing calls and walk-ins during peak hours</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">•</span>
-                  <span className="text-gray-300">High no-show rates due to manual reminder systems</span>
+                  <span className="text-gray-600">High no-show rates due to manual reminder systems</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">•</span>
-                  <span className="text-gray-300">Lost revenue from missed reservations and poor table management</span>
+                  <span className="text-gray-600">Lost revenue from missed reservations and poor table management</span>
                 </li>
               </ul>
             </div>
@@ -186,19 +186,19 @@ export default function Home() {
             {/* New Way Column */}
             <div className="background-glass p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">✅ New Way</h3>
-              <p className="text-gray-300 mb-6">AI voice agent for restaurants that works 24/7</p>
+              <p className="text-gray-600 mb-6">AI voice agent for restaurants that works 24/7</p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">•</span>
-                  <span className="text-gray-300">Our ai voice agent for restaurants handles reservations, waitlists, and ordering automatically</span>
+                  <span className="text-gray-600">Our ai voice agent for restaurants handles reservations, waitlists, and ordering automatically</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">•</span>
-                  <span className="text-gray-300">Smart reminders and confirmations reduce no-shows by 40%</span>
+                  <span className="text-gray-600">Smart reminders and confirmations reduce no-shows by 40%</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">•</span>
-                  <span className="text-gray-300">Optimize table turnover and maximize revenue with intelligent insights</span>
+                  <span className="text-gray-600">Optimize table turnover and maximize revenue with intelligent insights</span>
                 </li>
               </ul>
             </div>
@@ -224,7 +224,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4">Boost Efficiency</h3>
-              <p className="text-gray-300">Our ai voice agent for restaurants automates repetitive tasks and frees up your staff for what matters most - delivering exceptional guest experiences</p>
+              <p className="text-gray-600">Our ai voice agent for restaurants automates repetitive tasks and frees up your staff for what matters most - delivering exceptional guest experiences</p>
             </div>
 
             {/* Benefit 2 */}
@@ -237,7 +237,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4">Enhance Experience</h3>
-              <p className="text-gray-300">Deliver personalized, seamless service that keeps guests coming back and spreads positive word-of-mouth</p>
+              <p className="text-gray-600">Deliver personalized, seamless service that keeps guests coming back and spreads positive word-of-mouth</p>
             </div>
 
             {/* Benefit 3 */}
@@ -250,7 +250,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold mb-4">Increase Revenue</h3>
-              <p className="text-gray-300">Optimize operations, reduce no-shows, and maximize table turnover to boost your bottom line significantly</p>
+              <p className="text-gray-600">Optimize operations, reduce no-shows, and maximize table turnover to boost your bottom line significantly</p>
             </div>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function Home() {
                 <span className="text-4xl font-bold gradient-text">1</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Connect Your Systems</h3>
-              <p className="text-gray-300">Integrate our ai voice agent for restaurants with your existing POS, reservation, and communication systems in minutes</p>
+              <p className="text-gray-600">Integrate our ai voice agent for restaurants with your existing POS, reservation, and communication systems in minutes</p>
             </div>
 
             {/* Step 2 */}
@@ -279,7 +279,7 @@ export default function Home() {
                 <span className="text-4xl font-bold gradient-text">2</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Customize Your AI</h3>
-              <p className="text-gray-300">Configure AI assistants to match your brand voice, menu, and operational preferences</p>
+              <p className="text-gray-600">Configure AI assistants to match your brand voice, menu, and operational preferences</p>
             </div>
 
             {/* Step 3 */}
@@ -288,7 +288,7 @@ export default function Home() {
                 <span className="text-4xl font-bold gradient-text">3</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Go Live & Scale</h3>
-              <p className="text-gray-300">Launch your AI assistants and watch them handle reservations, orders, and guest feedback 24/7</p>
+              <p className="text-gray-600">Launch your AI assistants and watch them handle reservations, orders, and guest feedback 24/7</p>
             </div>
           </div>
         </div>
@@ -305,19 +305,19 @@ export default function Home() {
             {/* Basic Plan */}
             <div className="background-glass p-8 rounded-xl flex flex-col">
               <h3 className="text-2xl font-bold mb-2">Basic</h3>
-              <p className="text-4xl font-bold mb-6">$99<span className="text-lg text-gray-400">/month</span></p>
+              <p className="text-4xl font-bold mb-6">$99<span className="text-lg text-gray-500">/month</span></p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">AI Waitlist Assistant</span>
+                  <span className="text-gray-600">AI Waitlist Assistant</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Up to 500 guests/month</span>
+                  <span className="text-gray-600">Up to 500 guests/month</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Basic analytics dashboard</span>
+                  <span className="text-gray-600">Basic analytics dashboard</span>
                 </li>
               </ul>
               <Link href="/contact" className="button text-center block">
@@ -331,19 +331,19 @@ export default function Home() {
                 <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm">Most Popular</span>
               </div>
               <h3 className="text-2xl font-bold mb-2">Pro</h3>
-              <p className="text-4xl font-bold mb-6">$299<span className="text-lg text-gray-400">/month</span></p>
+              <p className="text-4xl font-bold mb-6">$299<span className="text-lg text-gray-500">/month</span></p>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">All AI Assistants (Waitlist, Ordering, Reservations, Feedback)</span>
+                  <span className="text-gray-600">All AI Assistants (Waitlist, Ordering, Reservations, Feedback)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Up to 2,000 guests/month</span>
+                  <span className="text-gray-600">Up to 2,000 guests/month</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Advanced analytics & insights</span>
+                  <span className="text-gray-600">Advanced analytics & insights</span>
                 </li>
               </ul>
               <Link href="/contact" className="button text-center block">
@@ -358,15 +358,15 @@ export default function Home() {
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Unlimited guests & locations</span>
+                  <span className="text-gray-600">Unlimited guests & locations</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Custom AI training & integration</span>
+                  <span className="text-gray-600">Custom AI training & integration</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-purple-400">✓</span>
-                  <span className="text-gray-300">Dedicated support & account manager</span>
+                  <span className="text-gray-600">Dedicated support & account manager</span>
                 </li>
               </ul>
               <Link href="/contact" className="button text-center block">
@@ -398,7 +398,7 @@ export default function Home() {
                   </div>
                   
                   {/* Testimonial Text */}
-                  <p className="text-gray-300 text-xl md:text-2xl italic text-center leading-relaxed">
+                  <p className="text-gray-600 text-xl md:text-2xl italic text-center leading-relaxed">
                     "{testimonials[currentTestimonial].text}"
                   </p>
                 </div>
@@ -410,7 +410,7 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <p className="font-bold text-lg">{testimonials[currentTestimonial].name}</p>
-                    <p className="text-gray-400">{testimonials[currentTestimonial].role}</p>
+                    <p className="text-gray-500">{testimonials[currentTestimonial].role}</p>
                   </div>
                 </div>
               </div>
@@ -470,7 +470,7 @@ export default function Home() {
               </button>
               {openFaq === 1 && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300">Most restaurants are up and running within 24-48 hours. Our team handles the integration with your existing systems, and we provide full training for your staff.</p>
+                  <p className="text-gray-600">Most restaurants are up and running within 24-48 hours. Our team handles the integration with your existing systems, and we provide full training for your staff.</p>
                 </div>
               )}
             </div>
@@ -486,7 +486,7 @@ export default function Home() {
               </button>
               {openFaq === 2 && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300">Yes! DineMate.ai integrates with all major POS systems including Toast, Square, Clover, and more. We also offer custom integrations for enterprise clients.</p>
+                  <p className="text-gray-600">Yes! DineMate.ai integrates with all major POS systems including Toast, Square, Clover, and more. We also offer custom integrations for enterprise clients.</p>
                 </div>
               )}
             </div>
@@ -502,7 +502,7 @@ export default function Home() {
               </button>
               {openFaq === 3 && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300">Our AI seamlessly transfers guests to your staff when requested or when complex situations arise. You maintain full control over the guest experience.</p>
+                  <p className="text-gray-600">Our AI seamlessly transfers guests to your staff when requested or when complex situations arise. You maintain full control over the guest experience.</p>
                 </div>
               )}
             </div>
@@ -518,7 +518,7 @@ export default function Home() {
               </button>
               {openFaq === 4 && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300">Absolutely! You can customize the AI's tone, responses, and behavior to match your brand perfectly. We provide an easy-to-use dashboard for all customizations.</p>
+                  <p className="text-gray-600">Absolutely! You can customize the AI's tone, responses, and behavior to match your brand perfectly. We provide an easy-to-use dashboard for all customizations.</p>
                 </div>
               )}
             </div>
@@ -534,7 +534,7 @@ export default function Home() {
               </button>
               {openFaq === 5 && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300">We offer 24/7 technical support via chat and email. Pro and Enterprise plans include priority support and dedicated account managers.</p>
+                  <p className="text-gray-600">We offer 24/7 technical support via chat and email. Pro and Enterprise plans include priority support and dedicated account managers.</p>
                 </div>
               )}
             </div>
@@ -549,7 +549,7 @@ export default function Home() {
         <div className="wrapper">
           <div className="background-glass p-12 md:p-16 rounded-2xl text-center max-w-4xl mx-auto">
             <h2 className="gradient-text mb-6">Ready to Transform Your Restaurant Operations?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Join hundreds of hospitality businesses leveraging AI to deliver exceptional guest experiences and boost revenue
             </p>
             <Link href="/contact" className="button text-lg">

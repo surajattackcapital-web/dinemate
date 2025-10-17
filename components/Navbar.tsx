@@ -23,7 +23,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-white/10 shadow-2xl" style={{ background: 'rgba(20, 20, 30, 0.95)', backdropFilter: 'blur(20px)' }}>
+              <div className="absolute top-full left-0 mt-2 w-64 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-gray-200 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)' }}>
                 <Link href="/solutions/ai-waitlist-assistant" className="block py-2 hover:text-purple-400 transition">AI Waitlist Assistant</Link>
                 <Link href="/solutions/ai-ordering-assistant" className="block py-2 hover:text-purple-400 transition">AI Ordering Assistant</Link>
                 <Link href="/solutions/ai-reservation-assistant" className="block py-2 hover:text-purple-400 transition">AI Reservation Assistant</Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-white/10 shadow-2xl" style={{ background: 'rgba(20, 20, 30, 0.95)', backdropFilter: 'blur(20px)' }}>
+              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-gray-200 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)' }}>
                 <Link href="/industries/restaurants" className="block py-2 hover:text-purple-400 transition">Restaurants</Link>
                 <Link href="/industries/cafes" className="block py-2 hover:text-purple-400 transition">Cafes</Link>
                 <Link href="/industries/hotels" className="block py-2 hover:text-purple-400 transition">Hotels</Link>
@@ -53,18 +53,18 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-56 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-white/10 shadow-2xl" style={{ background: 'rgba(20, 20, 30, 0.95)', backdropFilter: 'blur(20px)' }}>
+              <div className="absolute top-full left-0 mt-2 w-56 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-gray-200 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)' }}>
                 <Link href="/integrations" className="block py-2 hover:text-purple-400 transition font-semibold">All Integrations</Link>
-                <div className="border-t border-white/10 my-2"></div>
+                <div className="border-t border-gray-200 my-2"></div>
                 <p className="text-xs text-gray-400 mb-2">POS Systems</p>
                 <Link href="/integrations/toast" className="block py-1.5 hover:text-purple-400 transition text-sm">Toast</Link>
                 <Link href="/integrations/square" className="block py-1.5 hover:text-purple-400 transition text-sm">Square</Link>
                 <Link href="/integrations/clover" className="block py-1.5 hover:text-purple-400 transition text-sm">Clover</Link>
-                <div className="border-t border-white/10 my-2"></div>
+                <div className="border-t border-gray-200 my-2"></div>
                 <p className="text-xs text-gray-400 mb-2">Reservations</p>
                 <Link href="/integrations/opentable" className="block py-1.5 hover:text-purple-400 transition text-sm">OpenTable</Link>
                 <Link href="/integrations/resy" className="block py-1.5 hover:text-purple-400 transition text-sm">Resy</Link>
-                <div className="border-t border-white/10 my-2"></div>
+                <div className="border-t border-gray-200 my-2"></div>
                 <p className="text-xs text-gray-400 mb-2">Delivery</p>
                 <Link href="/integrations/doordash" className="block py-1.5 hover:text-purple-400 transition text-sm">DoorDash</Link>
                 <Link href="/integrations/ubereats" className="block py-1.5 hover:text-purple-400 transition text-sm">Uber Eats</Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-white/10 shadow-2xl" style={{ background: 'rgba(20, 20, 30, 0.95)', backdropFilter: 'blur(20px)' }}>
+              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-gray-200 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)' }}>
                 <Link href="/blog" className="block py-2 hover:text-purple-400 transition">Blog</Link>
                 <Link href="/case-studies" className="block py-2 hover:text-purple-400 transition">Case Studies</Link>
                 <Link href="/faqs" className="block py-2 hover:text-purple-400 transition">FAQs</Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-white/10 shadow-2xl" style={{ background: 'rgba(20, 20, 30, 0.95)', backdropFilter: 'blur(20px)' }}>
+              <div className="absolute top-full left-0 mt-2 w-48 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 rounded-xl border border-gray-200 shadow-2xl" style={{ background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)' }}>
                 <Link href="/about" className="block py-2 hover:text-purple-400 transition">About</Link>
                 <Link href="/careers" className="block py-2 hover:text-purple-400 transition">Careers</Link>
               </div>

@@ -417,3 +417,5 @@ The best restaurants in the world conduct pre-shift meetings religiously. They k
 *Ready to transform your pre-shift meetings? Start with the 15-minute framework from this guide. Track the results for 30 days. Adjust based on feedback. Make it a habit.*
 
 
+
+

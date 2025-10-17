@@ -542,3 +542,5 @@ Do these things consistently, and you'll join the minority of restaurants that d
 *Ready to transform your restaurant finances? Start by calculating your current prime cost. If it's over 60%, that's your first priority. Fix that, and everything else gets easier.*
 
 
+
+

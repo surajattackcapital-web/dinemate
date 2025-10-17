@@ -467,3 +467,5 @@ Start with these 10 fundamentals. Master each one. Build systems that scale. Hir
 *Ready to take your restaurant to the next level? Pick one area from this guide that needs the most attention and commit to mastering it over the next 90 days.*
 
 
+
+

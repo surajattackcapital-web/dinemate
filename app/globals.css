@@ -5,13 +5,15 @@
 /* CSS Variables from Design Theme */
 :root {
   /* Colors */
-  --color-primary: #000000;
+  --color-primary: #FFFFFF;
   --color-accent-start: #8009FF;
   --color-accent-end: #F200FF;
   --color-highlight: #9b8dff;
-  --color-text: #FFFFFF;
-  --color-glass: rgba(255, 255, 255, 0.05);
-  --color-glass-hover: rgba(255, 255, 255, 0.1);
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6b7280;
+  --color-glass: rgba(0, 0, 0, 0.05);
+  --color-glass-hover: rgba(0, 0, 0, 0.1);
   --color-cta: #7938CC;
   
   /* Gradients */
@@ -112,20 +114,20 @@ h3 {
 .background-glass {
   background: var(--color-glass);
   backdrop-filter: blur(0.8rem);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .background-glass:hover {
   background: var(--color-glass-hover);
-  box-shadow: 0 0 30px rgba(128, 9, 255, 0.4);
+  box-shadow: 0 0 30px rgba(128, 9, 255, 0.2);
 }
 
 /* Button */
 .button {
   background: var(--gradient-accent);
-  color: var(--color-text);
+  color: #FFFFFF;
   padding: 1rem 2.5rem;
   border-radius: 5rem;
   border: none;
@@ -139,7 +141,7 @@ h3 {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(128, 9, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(128, 9, 255, 0.4);
 }
 
 /* Gradient Border */
@@ -221,7 +223,7 @@ h3 {
   background: radial-gradient(circle, var(--color-highlight) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.3;
+  opacity: 0.1;
   animation: float 20s ease-in-out infinite;
 }
 
