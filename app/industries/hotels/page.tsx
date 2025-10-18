@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function Hotels() {
   return (
-    <div className="wrapper padding-section-large section-bg-blue">
+    <div className="wrapper">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="mb-16">
+        <section className="padding-section-large section-bg-blue mb-16">
           <div className="text-center">
             <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Hotel Solutions</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">

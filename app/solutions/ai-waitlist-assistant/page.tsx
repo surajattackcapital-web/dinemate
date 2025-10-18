@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function AIWaitlistAssistant() {
   return (
-    <div className="wrapper padding-section-large section-bg-purple">
+    <div className="wrapper">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="mb-16 text-center">
+        <section className="padding-section-large section-bg-purple mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Waitlist Assistant</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our ai voice agent for restaurants reduces no-shows, manages guests automatically, and optimizes your restaurant flow with intelligent waitlist management
@@ -23,7 +23,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* Image Right, Text Left Layout */}
-        <section className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <section className="padding-section-large section-bg-light grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="gradient-text text-3xl mb-6">Smart Guest Management</h2>
             <p className="text-gray-600 mb-4">
@@ -46,7 +46,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* Features */}
-        <section className="mb-16">
+        <section className="padding-section-large section-bg-gray mb-16">
           <h2 className="gradient-text text-3xl mb-8 text-center">Key Features</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="service-card background-glass">
@@ -68,7 +68,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* Benefits Section */}
-        <section className="mb-16">
+        <section className="padding-section-large section-bg-blue mb-16">
           <h2 className="gradient-text text-3xl mb-8 text-center">Transform Your Guest Experience</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="background-glass p-6 rounded-lg">
@@ -99,7 +99,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* How It Works */}
-        <section className="mb-16 background-glass p-8 rounded-lg">
+        <section className="padding-section-large section-bg-light mb-16 background-glass p-8 rounded-lg">
           <h2 className="gradient-text text-3xl mb-8 text-center">How Waitlist Management Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -121,7 +121,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* Use Cases */}
-        <section className="mb-16">
+        <section className="padding-section-large section-bg-purple mb-16">
           <h2 className="gradient-text text-3xl mb-8 text-center">Perfect For Every Restaurant Type</h2>
           <div className="space-y-4">
             <div className="background-glass p-6 rounded-lg">
@@ -140,7 +140,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* Stats */}
-        <section className="mb-16 background-glass p-12 rounded-2xl">
+        <section className="padding-section-large section-bg-gray mb-16 background-glass p-12 rounded-2xl">
           <h2 className="gradient-text text-3xl mb-8 text-center">Real Results</h2>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
@@ -163,7 +163,7 @@ export default function AIWaitlistAssistant() {
         </section>
 
         {/* CTA */}
-        <section className="background-glass p-12 rounded-2xl text-center">
+        <section className="padding-section-large section-bg-blue background-glass p-12 rounded-2xl text-center">
           <h2 className="gradient-text mb-4">Ready to Optimize Your Waitlist?</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Join leading restaurants using AI to reduce wait times and enhance guest satisfaction

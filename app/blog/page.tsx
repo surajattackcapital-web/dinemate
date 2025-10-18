@@ -20,9 +20,9 @@ export default async function BlogPage() {
   const categories = Array.from(new Set(posts.map(post => post.category))).filter(Boolean);
 
   return (
-    <div className="wrapper padding-section-large section-bg-light">
+    <div className="wrapper">
       {/* Header */}
-      <section className="text-center mb-16">
+      <section className="padding-section-large section-bg-light text-center mb-16">
         <h1 className="animated-gradient-text mb-6">Restaurant Insights & Best Practices</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Expert guidance on restaurant management, AI automation, operations optimization, 

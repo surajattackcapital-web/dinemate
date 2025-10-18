@@ -17,10 +17,10 @@ export default async function CaseStudies() {
   const caseStudies = await getAllCaseStudies();
 
   return (
-    <div className="wrapper padding-section-large section-bg-gray">
+    <div className="wrapper">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="mb-16 text-center">
+        <section className="padding-section-large section-bg-gray mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Success Stories</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from restaurants and hospitality businesses transforming their operations with DineMate.ai
