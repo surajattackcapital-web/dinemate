@@ -70,6 +70,8 @@ h3 {
   max-width: var(--wrapper-max-width);
   margin: 0 auto;
   padding: 0 10px;
+  background-color: var(--color-primary);
+  min-height: 100vh;
 }
 
 .padding-section-large {
