@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function AIFeedbackAssistant() {
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-purple">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="padding-section-large section-bg-purple mb-16 text-center">
+        <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Feedback Assistant</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Automated guest feedback & insights powered by our ai voice agent for restaurants — Turn every review into actionable intelligence
@@ -23,7 +23,7 @@ export default function AIFeedbackAssistant() {
         </section>
 
         {/* Main Content */}
-        <section className="padding-section-large section-bg-light mb-16">
+        <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="background-glass rounded-lg overflow-hidden">
               <img 

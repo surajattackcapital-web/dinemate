@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function Restaurants() {
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-blue">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="padding-section-large section-bg-blue mb-16">
+        <section className="mb-16">
           <div className="text-center">
             <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Complete Solutions</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -36,7 +36,7 @@ export default function Restaurants() {
         </section>
 
         {/* Overview */}
-        <section className="padding-section-large section-bg-light mb-16 background-glass p-8 rounded-lg">
+        <section className="mb-16 background-glass p-8 rounded-lg">
           <h2 className="gradient-text text-3xl mb-6">Transform Your Restaurant Operations</h2>
           <p className="text-gray-600 mb-4">
             Running a successful restaurant requires juggling reservations, managing waitlists, coordinating orders, and ensuring every guest leaves satisfied. Our ai voice agent for restaurants brings the power of artificial intelligence to streamline every aspect of your operation.
@@ -47,7 +47,7 @@ export default function Restaurants() {
         </section>
 
         {/* Solutions for Restaurants */}
-        <section className="padding-section-large section-bg-gray mb-16">
+        <section className="mb-16">
           <h2 className="gradient-text text-3xl mb-8 text-center">Tailored Solutions</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="service-card background-glass text-left">
@@ -154,7 +154,7 @@ export default function Restaurants() {
         </section>
 
         {/* Industry Challenges */}
-        <section className="padding-section-large section-bg-purple mb-16">
+        <section className="mb-16">
           <h2 className="gradient-text text-3xl mb-8 text-center">Solving Restaurant Industry Challenges</h2>
           <div className="space-y-4">
             <div className="background-glass p-6 rounded-lg">

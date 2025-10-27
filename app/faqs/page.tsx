@@ -49,10 +49,10 @@ export default function FAQs() {
   ];
 
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-light">
       <div className="max-w-4xl mx-auto">
         {/* Hero */}
-        <section className="padding-section-large section-bg-light mb-16 text-center">
+        <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Frequently Asked Questions - AI Voice Agent for Restaurants</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Everything you need to know about our ai voice agent for restaurants

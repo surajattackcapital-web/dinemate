@@ -59,11 +59,10 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
     .slice(0, 2);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-gray">
       <div className="max-w-5xl mx-auto">
         {/* Back Link */}
-        <div className="padding-section-large section-bg-gray">
-          <Link href="/case-studies" className="text-purple-400 hover:underline mb-8 inline-block">
+        <Link href="/case-studies" className="text-purple-400 hover:underline mb-8 inline-block">
           ← Back to Case Studies
         </Link>
 

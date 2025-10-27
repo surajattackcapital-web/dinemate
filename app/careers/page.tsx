@@ -51,10 +51,10 @@ export default function Careers() {
   ];
 
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-purple">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="padding-section-large section-bg-purple mb-16 text-center">
+        <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">Join Our AI Voice Agent for Restaurants Team</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Help us build our ai voice agent for restaurants that transforms how millions of people experience hospitality

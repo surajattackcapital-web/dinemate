@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function AIOrderingAssistant() {
   return (
-    <div className="wrapper">
+    <div className="wrapper padding-section-large section-bg-purple">
       <div className="max-w-6xl mx-auto">
         {/* Hero */}
-        <section className="padding-section-large section-bg-purple mb-16 text-center">
+        <section className="mb-16 text-center">
           <h1 className="animated-gradient-text mb-6">AI Voice Agent for Restaurants - Ordering Assistant</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Smart ordering through our ai voice agent for restaurants — Perfect for drive-thrus, phone orders, and digital channels
@@ -23,7 +23,7 @@ export default function AIOrderingAssistant() {
         </section>
 
         {/* Features Grid */}
-        <section className="padding-section-large section-bg-light grid md:grid-cols-2 gap-12 items-center mb-16">
+        <section className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="background-glass rounded-lg overflow-hidden">
             <img 
               src="/img/websites/taking_order.webp" 
